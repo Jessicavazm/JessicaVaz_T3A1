@@ -2,7 +2,6 @@
 
 
 # Q1 
-
 During our course, we have been using GIT as it's widely known and it's a very popular choice for managing code and keeping track of code changes. Apart from Git, other common source control programs are Mercurial and Subversion. When using source control for a large project, we want to ensure the GIT covers all features, and also includes the documentation as it's very important in all scale programs. The repository is hosted on the platform GitHub which offers plenty of features including branch merge, code comparison and code collaboration.
 
 The first step is to initialise a repository in the main or master branch, which will store the project's source code and it's files. When initialising the repository, we also need to add the README.md file which contains the project's documentation. README.md file contains all of the information about the program including name and description, table of contents, all the steps required to run the application, the usage cases, the tech stacked used to build the program, contribution guidelines, license information and plenty more. The gitignore template is another option we can add when initialising the project, this file will contain all the files git should ignore when pushing content to the repository.
@@ -13,7 +12,7 @@ Through the building process, different branches are created to allow developers
 
 With every commit, we should include meaningful messages to describe what changes has been added or changes. A good practise to have the type of commit before the message, they provide extra details for the commit messages. Other good practices includes keeping the message short and clear.
 
-Example of conventional commit bellow:
+Examples of conventional commit bellow:
 * git commit -m "docs: added a brief description" 
 * git commit -m "feat: added a JWT to auth" 
 * git commit -m "fix: fixed a bug in user auth fn" 
@@ -38,36 +37,36 @@ freeCodeCamp.org. (2022). How to Write Better Git Commit Messages – A Step-By-
 
 
 # Q2
-
 Quality aspects ensure the quality of a software, how functional and well-structured the application is. Every software should aim to incorporate the quality aspects in order to deliver a better user experience. Softwares can be measured based on a group of aspects or on a singular aspect. 
 
 Some of the most important aspects are listed bellow with a brief description on each of them:
 
-* Usability
+
+#### Usability
 User usability is a very important aspect, as it determines the overall software success. Softwares should be easy to navigate, preferably it should not require much training and it should require the minimum amount of clicks to perform a task. Another very important aspect is that softwares should consider and accommodate users with different disabilities. Ways to ensure this aspect is successful is collecting user stories, having an user product owner in place and ensuring designs are visually appealing and engaging without overwhelming the users.
 
-* Functionality
+#### Functionality
 Software functionality is another very important aspect as the software should be able to perform the intended functions and offer the users all the functions needed to perform a specific task. Software developers are responsible for the software functionalities.
 
-* Code Quality
-Software's code should be written in an efficient way, without bugs and semantically correct. 
+#### Code Quality
+Software codes should be written in an efficient way, without bugs and semantically correct. Developers should follow the best practices and adherence to standards to ensure high quality code.
 
-* Reliability 
+#### Reliability 
 Software should be able to handle errors gracefully without crashing or losing data. It must perform all tasks given different conditions. Mean Time Between Failure and Mean Time To Repair measurements can be used to check reliability aspect.
 
-* Maintainability
+#### Maintainability
 Developers should prioritise code maintainability to adapt to evolving user needs, as software must keep pace. The codebase should be structured for easy updates, allowing developers to implement changes, fix bugs, and add new features. 
 
-* Integrity
+#### Integrity
 Integrity aspect shows how easy the software can integrate with the dependant softwares in order to increase functionality.
 
-* Security
+#### Security
 Security is also on the top of the list, users must have their data protected when using the software. Software security ensures software is protected against cyber crimes, and have methods in place to protect users in case of cyber attacks. Measurements such as authentication and authentication can greatly reduce the risk of cyber crimes. Another important practise is to regularly implement security checks to ensure software is often protected. Regular checks also can prevent a future security breach.
 
-* Testability
+#### Testability
 This indicates how easy the software allows testers to perform testing on the software, how long does it takes to write a testing for the specific software, and how much time it needs to run the testing. One way to reduce costs here is for developers to perform unit and integration testing during the development stage before testers comes into place.  
 
-#### Photo example of software quality aspects
+### Photo example of software quality aspects
 ![Photo example of software quality aspects from the website codoid](./q2%20copy.png)
 
 References:
@@ -83,7 +82,37 @@ Butinar, M. (2023). Don’t Save on Quality: Essential Attributes of Good Softwa
 Outline a standard high level structure for a MERN stack application and explain the components
 
 # Q4	
-A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+
+#### Front end and Back end
+Web developers are divided in two groups front and back end. Front end developers will be working with everything that is displayed on the browser itself and the Backend developer will work with logic and technical side of the website(this includes APIS and DB). Together, they write the codes that *creates* the website allowing it to be displayed on a browser. Some of the most important skills and knowledge they need in order to create a website includes:
+
+- HTML: to define the website structure.
+- CSS: to style the website.
+- Javascript: to create the interactive content for the website.
+- Server-side languages: Python, Nodejs to manage data, and create integration.
+- Version control system: GIT, to track code changes and allow collaborations between developers.
+- Flask: Python's micro web frame used to create API.
+- PostgreSQL: to manage, store and retrieve data.
+- SQLAlchemy: ORM to connect DB to API.
+
+### Design 
+UX/ UI designers to ensure positive user's experience while navigating the website. User Interface (UI) designers ensure the elements that users interact directly on the website such as menus and buttons are easy to navigate, clear and visually appealing. User Experience (UX) designers ensure the overall flow on the website is enjoyable and functional. Web designer is also required to create the designs on the website and represent the 'brand' online. 
+
+### Testing
+QA engineers are responsible for testing the application and ensuring the application is free of bugs and errors. They ensure website works as it's supposed to and the application quality has passed the requirements. QA are also responsible for creating reports about the website's usability to ensure better user's experience.
+
+### Management
+A product manager who will overview the website project is also required. This person will be responsible for coordinating the team, assigning tasks accordingly with each person's set of skills, set goals and deadlines for the team and assist them through the process. 
+
+Project managers should have familiarity with project management tools such as Trello, Jira and Agile/ Scrum expertise. Apart from this, having familiarity with the other aspects of the project including development stages, testing stages would be highly beneficial.
+
+
+References:
+
+Workbook assignment: JessicaVaz_T2A1-A
+
+Rightpeoplegroup.com. (2024). How to build the ideal website development team structure. [online] Available at: https://rightpeoplegroup.com/blog/how-to-build-the-ideal-website-development-team-structure.
+
 
 # Q5	
 With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
