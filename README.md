@@ -41,7 +41,6 @@ Quality aspects ensure the quality of a software, how functional and well-struct
 
 Some of the most important aspects are listed bellow with a brief description on each of them:
 
-
 #### Usability
 User usability is a very important aspect, as it determines the overall software success. Softwares should be easy to navigate, preferably it should not require much training and it should require the minimum amount of clicks to perform a task. Another very important aspect is that softwares should consider and accommodate users with different disabilities. Ways to ensure this aspect is successful is collecting user stories, having an user product owner in place and ensuring designs are visually appealing and engaging without overwhelming the users.
 
@@ -82,9 +81,8 @@ Butinar, M. (2023). Don’t Save on Quality: Essential Attributes of Good Softwa
 Outline a standard high level structure for a MERN stack application and explain the components
 
 # Q4	
-
 #### Front end and Back end
-Web developers are divided in two groups front and back end. Front end developers will be working with everything that is displayed on the browser itself and the Backend developer will work with logic and technical side of the website(this includes APIS and DB). Together, they write the codes that *creates* the website allowing it to be displayed on a browser. Some of the most important skills and knowledge they need in order to create a website includes:
+Web developers are divided in two groups: front and back end. Frontend developers will be working with everything that is displayed on the browser itself and the Backend developer will work with logic and technical side of the website(this includes APIS and DB). Together, they write the codes that *creates* the website allowing it to be displayed on a browser. Some of the most important skills and knowledge they need in order to create a website includes:
 
 - HTML: to define the website structure.
 - CSS: to style the website.
@@ -116,6 +114,35 @@ Rightpeoplegroup.com. (2024). How to build the ideal website development team st
 
 # Q5	
 With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
+
+### Marathon running term 2 project
+Brief description of my project:
+
+The Marathon Running API is designed to bring runners together. It has functionality for runners to log their workouts and keep track of workout sessions. In the workout log feature, users are allowed to choose from one of the available run types. Date and distance in kilometers are also required to ensure the log keeps all the crucial information for users to track their best sessions. However, the main functionality of my API is to allow users to be part of running groups.
+Runnings groups will be later added to marathon events created by groups administrators.
+
+### Tracking project
+For tracking the project I have created for the term 2, I have used GitHub and Trello for app tracking. When using the GitHub, understanding how git branches works, how to create pull requests and merge branches were essential step to keep my code modular as I was able separate my code and work on different branches simultaneously without interfering with other part of the program.
+
+Trello management tool was also important, as it gave me acknowledgment of what tasks had be prioritized, what tasks had been finished, what features were ready for testing and what branches were ready for merging. Being able to create tasks, add labels, times and reminders on Trello helped to keep track of my progress through the whole process.
+
+### Development
+My initial task was to create an ER diagram, and to help with this task I have used draw.io which is a diagram and flowchart software. For this task, I had to understand how ER diagrams work, how entities are connected, the type of relationship between entities can have between them. In draw.io, I had to understand what formats to use, and what type of arrows to use to demonstrate the right type of relationship connecting the entities. 
+
+When starting the API project, it was crucial to understand how I could create a Virtual Environment to isolate my project, and download required packages to build the project. A understanding of Python PIP package would be necessary, as it was needed when installing dependencies.
+
+My project was built using Python and Flask (Python's framework), along with PostgreSQL. 
+The database stored the users, running groups and marathons information. SQLAlchemy was used to convert Python objects into database tables (users, groups, marathons, workouts tables), and to allow SQL queries using Python language. 
+
+When dealing with the database, I needed knowledge about data integrity, constraints, primary keys and foreign keys, schemas and data definition language (DDL). Marshmallow dependency was also used to help reading data to and from the database. The format used was JSON, which works in name- value pairs like dictionary. Flask extensions were used in the project when dealing with authentication and authorization. 
+
+Another important field, I needed knowledge was endpoints, and the different types of requests: GET, POST, DELETE, PUT AND PATCH. For testing purposes, I have used Insomnia. I have tested the features against different types of inputs, trying to catch errors gracefully and sending back an informative message with the help of SqlAlchemy. I have implemented built-in validation on main inputs including name, email and password using Marshmallow.validate extension. Authorization and authentication features were also tested in Insomnia using JWT. 
+
+
+References: 
+
+Project assignment: JessicaVaz_T2A2
+
 
 # Q6	
 With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
