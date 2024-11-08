@@ -366,7 +366,7 @@ switch ( 2 + 2 === 5 ) {
 ### Loops
 The program's flow can be interrupt when it reaches a loop. Loops executes a block of codes on repeat until a condition is met. JavaScript has few different types of loops.
 
-#### While loop
+### While loop
 A while loop is used to run interactions until a specific condition is met or until the loop has reached the end of the iterable data structure. A while loop runs repeatedly, evaluating the condition at the start of every iteration. If the condition is truthy, the body statements are executed, then the condition is evaluated again, and if the condition evaluates to falsy, the loops never runs. A common use case for a while loop is when the loop length is indeterminate, however it can be used with a specified number of times as the example bellow demonstrate.
 
 Syntax :
@@ -386,7 +386,7 @@ Example:
     > "Loop 2."
     > "Loop 3."
 
-#### Do...while loop
+### Do...while loop
 A do..while loop is very similar to the while loop. The difference is that the body precedes the condition and the loop runs at least one iteration - even if the condition is falsy in the first iteration. In the do...while loop, the evaluation actually happens at the end of iteration, that's the reason why the loop always runs at least once. This loop is useful for testing user input against specific conditions. A common use case for a do...while loop is when the loop length is indeterminate.
 
 Syntax:
@@ -395,9 +395,8 @@ Syntax:
     body;
     } while (condition);
 
-### Loops
 
-#### For loop
+### For loop
 A for loop is typically used to execute statements a specific number of times when the number of iterations is known in advance. For loops are made of 3 expressions: initialise , condition, and update. 
 The first expression initializes the loop, the second expression contains the condition and the third expression contains an expression to be executed once the loop has been completed. A for loop runs while the condition expression is truthy, when it becomes falsy, the loops end. 
 
@@ -415,7 +414,7 @@ Example:
 
 When initialising the variable, it's a common practice to use 'let' to declare the variable, and use 'i' to identify the variable. Since indexes start at 0, this will be reflected when declaring a FOR loop. The third expression is used to increment the identifier by one.
 
-#### For...in loop
+### For...in loop
 The for...in loop is a type of loop that allows you to iterate over the properties of an object. The for...in loop works by assigning each property of the object to a variable, one by one, and executing a block of code for each property.
 
 Syntax:
@@ -443,7 +442,7 @@ How to fetch properties value using the key:
         console.log(`${detail}: ${carDetails[detail]}`);
     }
 
-#### For...of loop
+### For...of loop
 The for...of loop can be used to work with iterables, for example: array, set and map. In the general case, for...of loop iterates over the elements of an iterable and runs the same statements for every element. The variable used in for...of loop can be a variable declared within the loop, or declared within the same scope.
 
 Syntax:
