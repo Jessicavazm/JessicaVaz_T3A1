@@ -171,12 +171,12 @@ Brief description of my project:
 The Marathon Running API is designed to bring runners together. It has functionality for runners to log their workouts and keep track of workout sessions. In the workout log feature, users are allowed to choose from one of the available run types. Date and distance in kilometers are also required to ensure the log keeps all the crucial information for users to track their best sessions. However, the main functionality of my API is to allow users to be part of running groups.
 Runnings groups will be later added to marathon events created by groups administrators.
 
-### Tracking project
+### Tracking project phrase
 For tracking the project I have created for the term 2, I have used GitHub and Trello for app tracking. When using the GitHub, understanding how git branches works, how to create pull requests and merge branches were essential step to keep my code modular as I was able separate my code and work on different branches simultaneously without interfering with other part of the program.
 
 Trello management tool was also important, as it gave me acknowledgment of what tasks had be prioritized, what tasks had been finished, what features were ready for testing and what branches were ready for merging. Being able to create tasks, add labels, times and reminders on Trello helped to keep track of my progress through the whole process.
 
-### Development
+### Development phrase
 My initial task was to create an ER diagram, and to help with this task I have used draw.io which is a diagram and flowchart software. For this task, I had to understand how ER diagrams work, how entities are connected, the type of relationship between entities can have between them. In draw.io, I had to understand what formats to use, and what type of arrows to use to demonstrate the right type of relationship connecting the entities. 
 
 When starting the API project, it was crucial to understand how I could create a Virtual Environment to isolate my project, and download required packages to build the project. A understanding of Python PIP package would be necessary, as it was needed when installing dependencies.
@@ -237,7 +237,70 @@ Project assignment: JessicaVaz_T2A2
 
 
 # Q6	
-With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
+
+### Tracking project phrase
+How effective my skills and knowledge were?
+
+When using GIT, I feel my set of skills and knowledge were enough to perform all tasks during the whole project duration. Git has been introduced in our web development course in the first stage, and it has been very present in all of our projects, because of this, I am confident my skills related to GIT are sufficient.
+
+With Trello, I also believe my skills and knowledge were sufficient since we have been introduced to Trello in the first term. 
+
+Examples:
+- For Marathon running application, I have created different branches for each feature and I worked on them independently. This was extremely beneficial since, I could improve and scale my project without interfering with other parts of the code.
+- In Trello, I was able to create a project tracking system with labels to tell me how urgent the task were, ensuring I was prioritizing the important tasks first. 
+
+Improvements suggested:
+- Adding the type of commit on the commit messages to make it more clear and organised.
+- Adhere to a git commit style such as conventional style.
+- Ensure to added only relevant information on Trello board to keep it simple and descriptive.
+- Ensure to use labels, checklists and due-time whenever applicable in Trello
+
+
+### Development phrase
+How effective my knowledge and skills were?
+
+During the development phrase, I believe my skills were enough. Initially, I had to change my project idea as I didn't think I could go ahead with the original idea which as a fitness tracker. I had struggle with the ER Diagram, understanding how the relationship between the entities worked, and how that impacted when writing my application. I came across many errors in my ER Diagram, which my tutor Aamod has helped me greatly to resolve and improve my idea. 
+
+I believe that my knowledge in ER Diagram and relationship types improved significantly after completing this project as I had to create and make several changes until the ER Diagram would reflect what I had in my for my project. 
+
+When it came the time to start the project, my skills and knowledge gained through ZOOM classes and ED content came in handy, I don't think I have struggled when creating VENV and getting all the necessary dependencies. Connecting my API to DB was also a smooth sail. 
+
+To create my API, I have used Python programming language, and my skills and knowledge were ok but I wish I had more knowledge to not struggle a lot, and also to be able to scale my project further. 
+
+With the database integration, I wish my skills and knowledge were more profound as I was stuck in this phrase more time than what I should. I run across numerous errors when dealing with the database. I believe having a deeper understanding of ORM, schemas, Primary and Foreign keys, back populating would be extremely beneficial for my next project.
+
+Examples:
+- I ran into a lot of issues when turning my ER diagram into actual code for the database. One big problem was that when I tried to fetch information from the database, I couldn’t get the right data because the relationships weren’t set up correctly. I had to go back and adjust how things were connected to make sure the database worked the way I planned in the diagram.
+- Initially, I also used the wrong arrows to represent one-to-one, one-to-many, and many-to-many relationships in my ER diagram.
+
+Improvements suggested:
+- More profound studies on Python programming language, ORM (Object Relational Mapping) and Database Models and Schemas.
+- Ensure ER Diagram is 100% correct before starting the project to not cause confusion.
+
+
+### Testing phrase
+How effective my knowledge and skills were?
+
+My testing skills and knowledge improved as I have performed them. As I performed the testing, I could see the potential areas which might cause errors and handle them gracefully. Working with Insomnia was easy and enjoyable as it was a powerful tool for me to improve my application. 
+
+I used Marshmallow to handle validation errors and SQLAlchemy for exception handling. The knowledge I gained from the Zoom classes was sufficient, but now that I feel more confident, I plan to explore additional types of errors and error-handling techniques for future projects.
+
+Having a good understanding of HTTP request methods was very crucial for the testing phrase as well. Again, the zoom classes, especially when we create the API together and tested using Insomnia gave me a great insight of the different HTTP request methods, body of request and response.
+
+Examples:
+- I have applied validation on main user's input to ensure correct data type.
+- I have created different folders in Insomnia for each model in my API to testing against different HTTP request methods to ensure organisation.
+- Being able to understand what to expect when using each HTTP request method (GET, POST, PUT, DELETE, PATCH) allowed me to design the API more effectively. It helped me structure each endpoint properly, ensuring that the correct data was sent and received with each type of request, and made error handling more straightforward. 
+
+Improvement suggested:
+- Explore other testing softwares such as Postman.
+- Explore different errors types and how to handle them gracefully.
+- Ensure future projects has more validations in place.
+- Implement sanitization for my future projects.
+
+References: 
+
+Project assignment: JessicaVaz_T2A2
 
 # Q7	
 Explain control flow, using an example from the JavaScript programming language
