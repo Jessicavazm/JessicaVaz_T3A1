@@ -20,11 +20,11 @@ Examples of conventional commit bellow:
 * git commit -m "fix: fixed a bug in user auth fn" 
 * git commit -m "test: test done in user's auth" 
 
-Once all the testing has been done and the code works as it supposed, features branches can be merged into the main branch, which stores source code and production ready code. Features branches can also be deleted safely after being merged, however this is optional. The first step to merge the branch is to perform a pull request. A pull request contains information describing the branch's purpose, and it's code. 
+Once all testing is complete and the code functions as intended, the feature branches can be merged into the main branch, which stores the source code and the production ready code. Features branches can also be deleted safely after being merged, however this is optional step. The first step to merge the branch is to perform a pull request. A pull request contains information describing the branch's purpose, and it's code. 
 
-Developers working in the projects can review the code, suggest improvements, provide feedback and ensure it doesn't have any conflicts with other existing branches. In case of an existing conflict, developers are required to solve the conflict first in order to proceed with the pull request. Another good feature is that Github makes it possible to assign reviewers and assignees to each branch or pull request. This ensures a structured review process and accountability for code quality.
+Developers working in the project can review the code, suggest improvements, provide feedbacks and ensure it doesn't have any conflicts with other existing branches. In case of an existing conflict, developers are required to solve the conflict first in order to proceed with the pull request. Another good feature is that Github makes it possible to assign reviewers and assignees to each branch or pull request. This ensures a structured review process and accountability for code quality.
 
-When all required tasks and requirements has been reached, the pull request will be ready to merge. Once the process is done, an acknowledgement message will be provided and all of the content from the extra branch will be merged into the main branch. Once all branches has been merged, and the code is working as it should, the code will be ready for deployment.
+When all required tasks and requirements has been reached, the pull request will be ready to merge. Once the process is done, an acknowledgement message will be provided, and all of the content from the extra branch will be merged into the main branch. Once all branches has been merged, and the code is working as intended, the code will be ready for deployment.
 
 
 #### Git commits and pull requests example
@@ -163,7 +163,6 @@ Rightpeoplegroup.com. (2024). How to build the ideal website development team st
 
 
 # Q5	
-With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
 
 ### Marathon running term 2 project
 Brief description of my project:
@@ -302,8 +301,221 @@ References:
 
 Project assignment: JessicaVaz_T2A2
 
+
 # Q7	
-Explain control flow, using an example from the JavaScript programming language
+<b>Control Flow</b> plays a crucial part in a program because it dictates the order in which the program executes the code. In another words, it dictates the program's flow. The default way the computer reads the code is top to bottom, line by line, until it comes across statements which can redirect the flow. All the examples given in the question will be in JavaScript. 
+
+Some of the most common statements that can change the flow includes: 
+
+### If/Else statements
+Conditional statements that execute specific code blocks based on whether one or more conditions evaluate to true. If a condition is true, the code within the 'if' block runs; otherwise, it is skipped. The 'else' block contains code that executes only if all previous conditions are false. In JavaScript, to chain multiple IF's, 'else if' are used.
+
+The syntax for IF/ ELSE statements is describe bellow:
+    
+    if (condition) {
+    // Code to execute if the condition is true
+    } else if (anotherCondition) {
+    // Code to execute if the first condition is false and this condition is true
+    } else {
+    // Code to execute if all previous conditions are false
+    }
+
+Example:
+
+    if ( number === 5 ) {
+        console.log( "Five." );
+    } else if ( number === 3 ) {
+        console.log( "Three" );
+    } else {
+        console.log( "Neither five nor three." );
+    }
+
+### Ternary operator
+The ternary operator is a conditional operator, it's more compact than If/ Else statements. Ternary operator uses 3 operands: the condition to be evaluated, the expression that will be executed if the condition evaluates to true, and the expression to be executed if the condition evaluates to false. 
+
+Syntax:
+
+    Condition ? expression1 : expression2
+
+Example:
+
+    let age = 20;
+
+    let driving_age = age >= 18 ? "You can get behind the wheel!!" : "You are too young kid...";
+
+    console.log(driving_age); // output: "You can get behind the wheel"
+
+### Switch... case statements
+Switch case is another type of conditional statement. It works by comparing by comparing an expression's value against different potential 'cases'. Each case contains a statement that will be executed if the case matches the expression's value. Encapsulated statements inside of the correct case also will be executed. 
+
+Once the match case is found, it's important to call 'break' keyword to exit the evaluation, since JS will execute any statements placed after the matched-case, this process is called *falling through*.
+Default case comes into action when none of the previous cases were the right value, default works similarly to 'else' in If/else statements. It's important to also note that variables declared inside each case can be accessed by the other cases within the same switch statement. One way to ensure case scope is maintained is to use block statement {}. 
+
+Example:
+
+switch ( 2 + 2 === 5 ) {
+    case false:
+    console.log( "False." );
+    break;
+  case true:
+    console.log( "True." );
+    break;
+} // "False."
+
+
+### Loops
+The program's flow can be interrupt when it reaches a loop. Loops executes a block of codes on repeat until a condition is met. JavaScript has few different types of loops.
+
+#### While loop
+A while loop is used to run interactions until a specific condition is met or until the loop has reached the end of the iterable data structure. A while loop runs repeatedly, evaluating the condition at the start of every iteration. If the condition is truthy, the body statements are executed, then the condition is evaluated again, and if the condition evaluates to falsy, the loops never runs. A common use case for a while loop is when the loop length is indeterminate, however it can be used with a specified number of times as the example bellow demonstrate.
+
+Syntax :
+
+    while (condition to be evaluated) {
+    loop body
+    }
+
+Example:
+
+    let iterationCount = 0;
+    while( iterationCount < 3 ) {
+    iterationCount++;
+    console.log( `Loop ${ iterationCount }.` );
+    }
+    > "Loop 1."
+    > "Loop 2."
+    > "Loop 3."
+
+#### Do...while loop
+A do..while loop is very similar to the while loop. The difference is that the body precedes the condition and the loop runs at least one iteration - even if the condition is falsy in the first iteration. In the do...while loop, the evaluation actually happens at the end of iteration, that's the reason why the loop always runs at least once. This loop is useful for testing user input against specific conditions. A common use case for a do...while loop is when the loop length is indeterminate.
+
+Syntax:
+
+    do {
+    body;
+    } while (condition);
+
+### Loops
+
+#### For loop
+A for loop is typically used to execute statements a specific number of times when the number of iterations is known in advance. For loops are made of 3 expressions: initialise , condition, and update. 
+The first expression initializes the loop, the second expression contains the condition and the third expression contains an expression to be executed once the loop has been completed. A for loop runs while the condition expression is truthy, when it becomes falsy, the loops end. 
+
+Syntax:
+
+    for (initialise; condition; update) {
+    // loop body
+    }
+
+Example:
+
+    for( let i = 0; i < 5; i++ ) {
+    console.log( "This loop will run five times.")
+    }
+
+When initialising the variable, it's a common practice to use 'let' to declare the variable, and use 'i' to identify the variable. Since indexes start at 0, this will be reflected when declaring a FOR loop. The third expression is used to increment the identifier by one.
+
+#### For...in loop
+The for...in loop is a type of loop that allows you to iterate over the properties of an object. The for...in loop works by assigning each property of the object to a variable, one by one, and executing a block of code for each property.
+
+Syntax:
+
+    for (let variable in object) {
+    // code to be executed
+    }
+
+Example:
+
+    const carDetails = { "make": "Toyota", "model": "Corolla", "year": 2022 };
+
+    for (const detail in carDetails) {
+        console.log(detail); // This will print each key in the object
+    };
+    > "make"
+    > "model"
+    > "year"
+
+How to fetch properties value using the key:
+
+    const carDetails = { "make": "Toyota", "model": "Corolla", "year": 2022 };
+
+    for (const detail in carDetails) {
+        console.log(`${detail}: ${carDetails[detail]}`);
+    }
+
+#### For...of loop
+The for...of loop can be used to work with iterables, for example: array, set and map. In the general case, for...of loop iterates over the elements of an iterable and runs the same statements for every element. The variable used in for...of loop can be a variable declared within the loop, or declared within the same scope.
+
+Syntax:
+
+    for (let item of iterable) {
+    // code to be executed
+    }
+
+Example:
+
+    const myIterable = [ apple, orange, berries ];
+    for (const fruit of myIterable) {
+    console.log(fruit);
+    }
+    > apple
+    > orange
+    > berries
+
+#### When to use For and While loops
+- Use a while loop when you want to execute a block of code repeatedly as long as a certain condition is true.
+- Use a do...while loop when you want to execute a block of code at least once, and then repeatedly as long as a certain condition is true.
+- Use a for loop when you know the number of times you want to execute a block of code.
+- Use a for...in loop when you want to iterate over the properties of an object.
+- Use a for...of loop when you want to iterate over the elements of an iterable object such as an array or a string.
+
+### Statements
+- Return statement: It is used within a function, when the return statement happens, the functions stops and sends the value back to the function's caller. If return is not specified, JavaScript implicitly returns undefined.
+- Break statement: It's used to completely exit the current loop or switch interaction.
+- Continue statement: It is used to stop the current iteration, and skip to the next iteration if the condition still true. Commonly used in JavaScript loops to skip current value instead of exiting the loop completely.
+
+Example:
+
+    let iterationCount = 0;
+    while( iterationCount <= 5 ) {
+    iterationCount++;
+    if( iterationCount === 3 ) {
+        continue;
+    }
+    console.log( `Loop ${ iterationCount }.` );
+    }
+    console.log( "Loop ended." );
+    > "Loop 1."
+    > "Loop 2."
+    > "Loop 4."
+    > "Loop 5."
+    > "Loop ended."
+
+### Try...catch blocks
+
+- Try block: This block contains code that might throw an error. If no error occurs, the code runs as usual.
+- Catch block: If an error occurs in the try block, JavaScript immediately jumps to the catch block, skipping any remaining code in the try block. The catch block handles the error.
+- Finally block: It always executes regardless if an error was caught or not.
+
+Example:
+
+    try {
+    let result = riskyOperation();
+    console.log("Operation succeeded:", result);
+    } catch (error) {
+    console.log("An error occurred:", error.message);
+    } finally {
+    console.log("This will run no matter what.");
+    }
+
+References:
+
+developer.mozilla.org. (n.d.). Control flow - MDN Web Docs Glossary: Definitions of Web-related terms | MDN. [online] Available at: https://developer.mozilla.org/en-US/docs/Glossary/Control_flow.
+
+web.dev. (n.d.). Control flow. [online] Available at: https://web.dev/learn/javascript/control-flow.
+
+‌
+‌
 
 # Q8	
 Explain type coercion, using examples from the JavaScript programming language
