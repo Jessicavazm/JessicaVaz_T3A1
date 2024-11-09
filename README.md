@@ -240,7 +240,7 @@ Project assignment: JessicaVaz_T2A2
 ### Tracking project phrase
 How effective my skills and knowledge were?
 
-When using GIT, I feel my set of skills and knowledge were enough to perform all tasks during the whole project duration. Git has been introduced in our web development course in the first stage, and it has been very present in all of our projects, because of this, I am confident my skills related to GIT are sufficient.
+When using GIT, I feel my set of skills and knowledge were enough to perform all tasks during the whole project duration. Git has been introduced in our web development course in the first stage, and it has been very present in all of our projects, because of this, I am confident my skills related to GitHub are sufficient.
 
 With Trello, I also believe my skills and knowledge were sufficient since we have been introduced to Trello in the first term. 
 
@@ -260,7 +260,7 @@ How effective my knowledge and skills were?
 
 During the development phrase, I believe my skills were enough. Initially, I had to change my project idea as I didn't think I could go ahead with the original idea which as a fitness tracker. I had struggle with the ER Diagram, understanding how the relationship between the entities worked, and how that impacted when writing my application. I came across many errors in my ER Diagram, which my tutor Aamod has helped me greatly to resolve and improve my idea. 
 
-I believe that my knowledge in ER Diagram and relationship types improved significantly after completing this project as I had to create and make several changes until the ER Diagram would reflect what I had in my for my project. 
+Furthermore, I believe that my knowledge in ER Diagram and relationship types improved significantly after completing this project as I had to create and make several changes until the ER Diagram would reflect what I had in my for my project. 
 
 When it came the time to start the project, my skills and knowledge gained through ZOOM classes and ED content came in handy, I don't think I have struggled when creating VENV and getting all the necessary dependencies. Connecting my API to DB was also a smooth sail. 
 
@@ -310,7 +310,7 @@ Some of the most common statements that can change the flow includes:
 ### If/Else statements
 Conditional statements that execute specific code blocks based on whether one or more conditions evaluate to true. If a condition is true, the code within the 'if' block runs; otherwise, it is skipped. The 'else' block contains code that executes only if all previous conditions are false. In JavaScript, to chain multiple IF's, 'else if' are used.
 
-The syntax for IF/ ELSE statements is describe bellow:
+The syntax for IF/ ELSE statements is described bellow:
     
     if (condition) {
     // Code to execute if the condition is true
@@ -346,7 +346,7 @@ Example:
     console.log(driving_age); // output: "You can get behind the wheel"
 
 ### Switch... case statements
-Switch case is another type of conditional statement. It works by comparing by comparing an expression's value against different potential 'cases'. Each case contains a statement that will be executed if the case matches the expression's value. Encapsulated statements inside of the correct case also will be executed. 
+Switch case is another type of conditional statement. It works by comparing an expression's value against different potential 'cases'. Each case contains a statement that will be executed if the case matches the expression's value. Encapsulated statements inside the correct case also will be executed. 
 
 Once the match case is found, it's important to call 'break' keyword to exit the evaluation, since JS will execute any statements placed after the matched-case, this process is called *falling through*.
 Default case comes into action when none of the previous cases were the right value, default works similarly to 'else' in If/else statements. It's important to also note that variables declared inside each case can be accessed by the other cases within the same switch statement. One way to ensure case scope is maintained is to use block statement {}. 
@@ -364,10 +364,10 @@ switch ( 2 + 2 === 5 ) {
 
 
 ### Loops
-The program's flow can be interrupt when it reaches a loop. Loops executes a block of codes on repeat until a condition is met. JavaScript has few different types of loops.
+The program's flow can be interrupted when it reaches a loop. Loops execute a block of codes on repeat until a condition is met. JavaScript has few different types of loops.
 
 ### While loop
-A while loop is used to run interactions until a specific condition is met or until the loop has reached the end of the iterable data structure. A while loop runs repeatedly, evaluating the condition at the start of every iteration. If the condition is truthy, the body statements are executed, then the condition is evaluated again, and if the condition evaluates to falsy, the loops never runs. A common use case for a while loop is when the loop length is indeterminate, however it can be used with a specified number of times as the example bellow demonstrate.
+A while loop is used to run interactions until a specific condition is met or until the loop has reached the end of the iterable data structure. A while loop runs repeatedly, evaluating the condition at the start of every iteration. If the condition is truthy, the body statements are executed, then the condition is evaluated again, and if the condition evaluates to Falsy, the loop never runs. A common use case for a while loop is when the loop length is indeterminate, however it can be used with a specified number of times as the example bellow demonstrate.
 
 Syntax :
 
@@ -387,7 +387,7 @@ Example:
     > "Loop 3."
 
 ### Do...while loop
-A do..while loop is very similar to the while loop. The difference is that the body precedes the condition and the loop runs at least one iteration - even if the condition is falsy in the first iteration. In the do...while loop, the evaluation actually happens at the end of iteration, that's the reason why the loop always runs at least once. This loop is useful for testing user input against specific conditions. A common use case for a do...while loop is when the loop length is indeterminate.
+A do..while loop is very similar to the while loop. The difference is that the body precedes the condition and the loop runs at least one iteration - even if the condition is Falsy in the first iteration. In the do...while loop, the evaluation actually happens at the end of iteration, that's the reason why the loop always runs at least once. This loop is useful for testing user input against specific conditions. A common use case for a do...while loop is when the loop length is indeterminate.
 
 Syntax:
 
@@ -397,8 +397,8 @@ Syntax:
 
 
 ### For loop
-A for loop is typically used to execute statements a specific number of times when the number of iterations is known in advance. For loops are made of 3 expressions: initialise , condition, and update. 
-The first expression initializes the loop, the second expression contains the condition and the third expression contains an expression to be executed once the loop has been completed. A for loop runs while the condition expression is truthy, when it becomes falsy, the loops end. 
+A for loop is typically used to execute statements a specific number of times when the number of iterations is known in advance. For loops are made of 3 expressions: initialise, condition, and update. 
+The first expression initialises the loop, the second expression contains the condition and the third expression contains an expression to be executed once the loop has been completed. A for loop runs while the condition expression is truthy, when it becomes Falsy, the loop ends. 
 
 Syntax:
 
@@ -471,7 +471,7 @@ Example:
 ### Statements
 - Return statement: It is used within a function, when the return statement happens, the functions stops and sends the value back to the function's caller. If return is not specified, JavaScript implicitly returns undefined.
 - Break statement: It's used to completely exit the current loop or switch interaction.
-- Continue statement: It is used to stop the current iteration, and skip to the next iteration if the condition still true. Commonly used in JavaScript loops to skip current value instead of exiting the loop completely.
+- Continue statement: It is used to stop the current iteration, and skip to the next iteration if the condition still true. Continue statement is commonly used in JavaScript loops to skip current value instead of exiting the loop completely.
 
 Example:
 
@@ -517,11 +517,11 @@ web.dev. (n.d.). Control flow. [online] Available at: https://web.dev/learn/java
 # Q8	
 JavaScript is considered a *weakly typed language*, also called dynamically typed, which means it's more flexible when it comes to data type checks. Operations in JS can be performed without a strict data type check, in case of an expression being evaluated with two different types, JS will try to coerce both types into the same type in order to perform the evaluation. 
 
-This process is called <b>Type coercion</b> in JavaScript. This is one of the main difference between JavaScript and Python programming languages. Python on the other hand is considered a *strong typed language*, this means Python won't allow operations to be performed on different data types without an implicit declaration before hand. If we tried to perform that operation in Python, we would end up with an error.
+This process is called <b>Type coercion</b> in JavaScript. This is one of the main difference between JavaScript and Python programming languages. Python on the other hand is considered a *strong typed language*, this means Python won't allow operations to be performed on different data types without an implicit declaration beforehand. If we tried to perform that operation in Python, we would end up with an error.
 
-There's two types of coercion in JS, the <b>implicit type</b> which JavaScrypt automatically converts the data type in order to make the expression work, and the <b>explicit type</b> when the user converts the type manually. Type coercion is applicable in all data types (primitive types or objects), when this process happens in objects, JS will try to convert the object into a primitive type using toString() or valueOf() methods. It's important to remember that if none of those methods are called, JS will convert to it's default method: String. 
+There are two types of coercion in JS, the <b>implicit type</b> which JavaScript automatically converts the data type in order to make the expression work, and the <b>explicit type</b> when the user converts the type manually. Type coercion is applicable in all data types (primitive types or objects), when this process happens in objects, JS will try to convert the object into a primitive type using toString() or valueOf() methods. It's important to remember that if none of those methods are called, JS will convert to its default method: String. 
 
-Another important aspect about data type coercion is that JavaScript only has three different types of coercions: 
+Another important aspect about data type coercion is that JavaScript only has three different types of coercion: 
 - to string
 - to boolean
 - to number 
@@ -642,14 +642,253 @@ GeeksforGeeks (2020). What is Type Coercion in JavaScript ? [online] GeeksforGee
 
 ‌
 # Q9	
+In JavaScript, data types are divided in two main groups: the primitive types and the object types. Another important feature of JS is 
 
-### Data types in JavaScript
+### Primitive data types
+Primitive data types are the 'simple' type, they are stored directly at the base of the program and their values are immutable. All the primitive data types can be tested using typeOf operator, apart from the 'Null' type. If we try to use typeOf on 'Null', we will get 'object' instead. One way around this is to use the strict equality operator when checking if a variable is a Null type. 
+
+Most primitive data types has 'object wrappers' which works as mini helpers that allows methods to be applied directly in the variables. In the example bellow, toExponential() method is called on the variable num to format the number 42 into an exponential notation.
+
+    let num = 42;
+    console.log(num.toExponential()); // "4.2e+1"
+
+Wrappers are not available in Null and Undefined type, trying to use object wrappers on those methods will result in a TypeError exception.
+
+
+### Primitive data types
+
+### String
+Represents a collection of characters
+- One of the most common data type.
+- It can be created with single '' or double quotes "".
+- Backticks `` allows string interpolation.
+- Use concat() or + to concatenate two strings.
+- Most common methods for string:
+    - length - Returns the number of characters in a string.
+    - toUpperCase() and toLowerCase() - Convert strings to uppercase or lowercase.
+    - indexOf() - Finds the first occurrence of a substring. Returns -1 if not found.
+    - includes() - Checks if a substring exists within the string. Returns true or false.
+    - slice() – Extracts a section of a string and returns it as a new string.
+    - replace() – Replaces a specified value with another in a string (only the first match).
+    - split() – Splits a string into an array based on a specified separator.
+
+String declaration and string interpolation:
+
+    let name = "Jessica";
+    let age = 31;
+    let greeting = `Hello, my name is ${name} and I'm ${age} years old.`;
+    console.log(greeting); // "Hello, my name is Jessica and I'm 31 years old."
+
+Using replace() method:
+
+    let phrase = "Hello, world!";
+    console.log(phrase.replace("world", "Jessica")); // "Hello, Jessica!"
+
+Using toUpperCase() && toLowerCase():
+
+    console.log("hello".toUpperCase()); // "HELLO"
+    console.log("WORLD".toLowerCase()); // "world"
+
+### Number 
+Represents numbers both integers and float
+- JavaScript numbers are stored as 64-bit floating-point values.
+- JS can store numbers from -2^53 to 2^53 in this data type, numbers larger than 2^53 are stored in BigInt instead.
+- NaN Not a Number: this is also part of the number data type, it's used for arithmetics operations when it encounters a result that can not be processed as a number.
+- Infinity and -Infinity: Represents values beyond the minimum and the maximum limits. (Dividing a positive number by 0 in JS, would return 'infinity').
+- Common methods to work with numbers in JS includes: 
+    - Number.isInteger() => checks if the numbers is integer
+    - Number.isIntegerNaN() => checks if the numbers is Not a Number
+    - toBeFixed() => it rounds a number to a specified number of decimals places and it returns a string
+    - parseInt() and parseFloat() => Convert strings to integers and floating-point numbers
+
+Example in JS codes:
+
+Converting string into number, and floating-point numbers:
+
+    console.log(parseInt("42")); // 42
+    console.log(parseFloat("3.14")); // 3.14
+
+Using toFixed () method:
+
+    let num = 3.14159;
+    console.log(num.toFixed(2)); // "3.14"
+
+Using isInteger() method:
+
+    console.log(Number.isInteger(42)); // true
+
+
+### BigInt 
+Represents very large numbers
+- Useful for numbers larger than 2^53
+- It works by adding the letter n by the end of the Number.
+
+Declaring an bigInt variable:
+
+    let big = 123456789012345678901234567890n;
+
+### Boolean 
+Represents logical values True || False
+- Used to control the flow of the program.
+- It's commonly used in conditional and comparison operations.
+- To create a Boolean variable, you need to assign either True or False value to the declared variable. 
+- Booleans can be used with Logical operators: 
+    - AND (&&) - Returns true if both operands are true.
+    - OR (||) - Returns true if at least one operand is true.
+    - NOT (!) - Inverts the Boolean value.
+
+Example of a Boolean data type:
+
+    let isRaining = true;
+
+    if (isRaining) {
+        console.log("Take an umbrella!");
+    } else {
+        console.log("No need for an umbrella today.");
+    }
+
+
+### Undefined
+Represents the absence of a value. Common events when undefined is returned:
+- A return statement without a value, by default returns undefined.
+- Accessing a object's property that does not exist also returns undefined.
+- Declaring a variable without initialising first returns undefined.
+- When using searching methods, if no element is found it also returns undefined.
+
+Declaring a variable without initialization:
+
+    let myVariable;
+    console.log(myVariable); // Output: undefined
+
+Parameters not given in the greet function:
+
+    function greet(name) {
+    console.log("Hello, " + name);
+    }
+    
+    greet(); // Output: Hello, undefined
+
+### Null
+Represents 'nothing', absence of an object.
+- You need to explicitly assign null to a variable.
+
+### Symbol
+Represents a unique, immutable identifier, useful for object keys
+- Introduced in ES6 (ECMAScript 2015).
+- Often used as an identifier for object's properties.
+- Creates uniques keys using symbol() function.
+- Able to hide obj properties in searching calls.
+
+Example of declaring a Symbol with the same name:
+
+    let sym1 = Symbol("description");
+    let sym2 = Symbol("description");
+
+    console.log(sym1 === sym2); // Output: false
+
+
+### Non-Primitive data types
+
+### Objects
+Collection of key-value pairs, including objects, arrays, and functions.
+- The only mutable data type in JS
+- Similar to Python Dictionary
+- Object keys are interpreted as strings or symbols
+- Object values can be values of any type, including other objects
+- Dot notation doesn't work on numerical data type keys.
+- Wrapped in curly braces and includes key-value pairs, or properties, with property names and values.
+
+### How to declare an object 
+
+    let student = {}
+    student["name"] = "Jess"
+
+Create a dictionary and populate it:
+
+    let person = {
+        name : "Jess",
+        age : 21 
+    }
+
+How to get specific values:
+
+    person.age
+    person.name
+
+How to change values:
+
+    person.age = 31
+    person.name = "Jessica"
+
+
+### Array
+An array is a special kind of object, it's a collection of indexed values. In JS, an array is represented by an ordered sequence of elements separated by commas and wrapped in square brackets. Array is a way to collect multiple pieces of data together in one variable, and it's important to mention that the data stored in an array can be of different types. Array index starts at 0.
+
+Example of array declaration:
+
+    let cuteAnimals = ["koala", "wombat", "dog"];
+
+
+### Array common methods
+
+* Find array length => arr.length ()
+* Add element to end of array => arr.push()
+* Add element to begin of the array => arr.unshift()
+* Remove item from the end of the array => arr.pop()
+* Remove item from the beginning of the array => arr.shift()
+* Access element by index, eg: arr[1], this should return 31
+* Remove specific amount of items starting at a given index position => arr.splice(1,2)
+* Combine arrays by using concat method => let new_array = arr.concat(old_array)
+* Sort an array using sort method, alphabetically for strings and lowest to highest for numbers => arr.sort()
+* Reverse an array using reverse method => arr.reserve()
+* Map method is used to create a new array by applying a function to each element of an existing array, new array needs to be stored in a new variable.
+
+JS coding examples:
+
+    let myArray = [];
+    myArray.push(4); //append to the end
+    myArray.unshift(2); //append to the beginning
+    console.log(myArray); // => [2, 4]
+
+    myArray.pop(); //remove from the end
+    myArray.shift(); //remove from the beginning
+    console.log(myArray); // => []
+
+
+### Functions
+- First class citizen:
+    - Assigned to variables
+    - Nested in other objects/ functions
+    - Passed as args
+    - Returned from other functions
+- Functions can be anonymous
+- Functions can be called before they are declared
+- Functions in JS have properties: name && length
+- JS supports Async Functions and Promises
+- JS supports IIFE (Immediately Invoked Function Expressions)
+
+How to declare a function:
+
+    function greet(name) {
+        return `Hello, ${name}!`;
+    }
+    console.log(greet("Jessica")); // Output: Hello, Jessica!
+
+
+How to check functions properties:
+
+    function myFunc(a, b) {}
+    console.log(myFunc.name); // "myFunc"
+    console.log(myFunc.length); // 2
 
 
 <b>References:</b>
 
 W3Schools (2020). JavaScript Data Types. [online] W3schools.com. Available at: https://www.w3schools.com/js/js_datatypes.asp.
 
+MDN (2019). JavaScript data types and data structures. [online] MDN Web Docs. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures.
+
+‌
 # Q10	
 Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
 
