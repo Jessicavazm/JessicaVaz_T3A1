@@ -822,37 +822,41 @@ How to change values:
 
 
 ### Array
-An array is a special kind of object, it's a collection of indexed values. In JS, an array is represented by an ordered sequence of elements separated by commas and wrapped in square brackets. Array is a way to collect multiple pieces of data together in one variable, and it's important to mention that the data stored in an array can be of different types. Array index starts at 0.
+An array is a special kind of object, it's a collection of indexed values. In JS, an array is represented by an ordered sequence of elements separated by commas and wrapped in square brackets. Array is a way to collect multiple pieces of data together in one variable.
+
+Important features of arrays:
+- Arrays are dynamic in JS, that means it can smaller in size or bigger.
+- First element in the array is 0, second element is 1, and so on.
+- Arrays can hold different data types.
+- Vast list of methods to manipulate arrays in JS.
+- High order functions for processing elements such as map(), filter() and reduce().
+- Arrays are iterable using loops.
+- JS supports matrix arrays.
+- Immutable Array Methods returns a new array instead of modifying the original one.
+- JS supports sparse arrays
 
 Example of array declaration:
 
     let cuteAnimals = ["koala", "wombat", "dog"];
 
+Example of adding an extra element in an array:
 
-### Array common methods
+    let arr = [1, 2, 3];
+    arr.push(4); // Adds 4 at the end
+    console.log(arr); // [1, 2, 3, 4]
 
-* Find array length => arr.length ()
-* Add element to end of array => arr.push()
-* Add element to begin of the array => arr.unshift()
-* Remove item from the end of the array => arr.pop()
-* Remove item from the beginning of the array => arr.shift()
-* Access element by index, eg: arr[1], this should return 31
-* Remove specific amount of items starting at a given index position => arr.splice(1,2)
-* Combine arrays by using concat method => let new_array = arr.concat(old_array)
-* Sort an array using sort method, alphabetically for strings and lowest to highest for numbers => arr.sort()
-* Reverse an array using reverse method => arr.reserve()
-* Map method is used to create a new array by applying a function to each element of an existing array, new array needs to be stored in a new variable.
+Example of array with different data types:
 
-JS coding examples:
+    let mixedArray = [42, "hello", { name: "Jessica" }, [1, 2, 3]];
 
-    let myArray = [];
-    myArray.push(4); //append to the end
-    myArray.unshift(2); //append to the beginning
-    console.log(myArray); // => [2, 4]
+Fetching a specific element in a Matrix array in JS:
 
-    myArray.pop(); //remove from the end
-    myArray.shift(); //remove from the beginning
-    console.log(myArray); // => []
+    let matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    console.log(matrix[1][1]); // 5
 
 
 ### Functions
@@ -890,7 +894,152 @@ MDN (2019). JavaScript data types and data structures. [online] MDN Web Docs. Av
 
 ‌
 # Q10	
-Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
+Arrays in JavaScript can be accessed through indexes. JavaScript has a rich number of methods available to manipulate arrays. Some of the most common methods will described bellow with JS coding examples to further explain the process.
+
+How to declare an array, myArr variable in the used in all the examples bellow:
+    
+    let myArr = ["Jess", 31, "Melbourne"]
+
+### Concat() method
+This method add two arrays together and returns a new array
+    
+    let myArr2 = ["Australia", 1]
+
+    let merged_arrays = myArr.concat(myArr2);
+    console.log(merged_arrays) // ["Jess", 31, "Melbourne", "Australia", 1]
+
+### Push() method
+This method adds elements at the end of the array, it does change the original array.
+    
+    myArr.push("Australia")
+    console.log(myArr) // ["Jess", 31, "Melbourne", "Australia"]
+
+### Pop() method 
+This method removes the last item in the array and returns it
+
+    myArr.pop(); // "Melbourne"
+
+    console.log(myArr) // ["Jess", 31]
+
+### Shift() method
+This method removes the first item in the array and returns it
+
+### Unshift() method 
+This method add items to the beginning of the Array, it does change the original array.
+
+    myArr.unshift("Girl")
+    console.log(myArr) // ["Girl", "Jess", 31, "Melbourne"]
+
+### Splice() method
+This method removes an element from a specified index. The first parameter is the element index position and the second parameter is the delete count(how many elements to be deleted). This methods changes the original array. When second parameter has not been declared, this method will delete every element starting from the given index.
+
+It's possible to add elements with the splice method by passing the number 0 in the second parameter.
+The syntax will consist of 3 parameters instead. The first is the element index from where the adding will start, the second parameter is 0, the third parameter are the elements to be added to array.
+
+How to remove elements with splice:
+
+    myArr.splice(0, 1); //  Removes 1 element at index 0
+    console.log(myArr) // [31, "Melbourne"]
+
+### Slice() method 
+This method returns sub-arrays. This does not change the original array. Assigning the new sub-array to a variable is the best use case for this method.
+
+Syntax:
+    
+    array.slice(start, end)
+
+### Searching methods
+- indexOf() method: Returns the first index of an element, or -1 if not found.
+- includes() method: Checks if an element exists in the array.
+- find() and findIndex() methods: Search based on a condition.
+
+JS coding examples:
+
+    let numbers = [10, 20, 30, 40];
+    console.log(numbers.indexOf(20)); // 1
+    console.log(numbers.includes(50)); // false
+
+    let found = numbers.find(num => num > 25);
+    console.log(found); // 30
+
+    let index = numbers.findIndex(num => num > 25);
+    console.log(index); // 2
+
+### Filter() method
+This method returns a new array with the items that has passed the condition.
+
+Syntax:
+
+    let results = array.filter(function(item, index, array) {
+    // returns true if the item passes the filter
+    });
+
+Example:
+
+    let ages = [18, 22, 16, 25];
+    let adults = ages.filter(age => age >= 18);
+    console.log(adults); // [18, 22, 25]
+
+### Map() method 
+This method creates a new array by applying a function on each element.
+
+Example:
+
+    let numbers = [1, 2, 3, 4];
+    let doubled = numbers.map(num => num * 2);
+    console.log(doubled); // [2, 4, 6, 8]
+
+### Reduce() method
+This method reduces all elements to a single value. It's useful for calculations.
+
+Example:
+
+    let sum = [1, 2, 3, 4].reduce((total, num) => total + num, 0);
+    console.log(sum); // 10
+
+### Sort(): 
+This method sorts elements in place.
+
+Example:
+
+    let names = ["Jessica", "Aamod", "Zara"];
+    names.sort();
+    console.log(names); // ["Aamod", "Jessica", "Zara"]
+
+### Reverse() method
+This method reverses the order of elements.
+
+Example:
+
+    names.reverse();
+    console.log(names); // ["Zara", "Jessica", "Aamod"]
+
+### forEach() 
+This method iterates over each element in the array.
+
+    const colors = ['green', 'yellow', 'blue'];
+    colors.forEach((item, index) => console.log(index, item));
+    // returns the index and the every item in the array
+    // 0 "green"
+    // 1 "yellow"
+    // 2 "blue"
+
+### ...Spread operator
+This operator can copy arrays, or combine arrays.
+
+Example:
+
+    let array1 = [1, 2];
+    let array2 = [3, 4];
+    let combinedArray = [...array1, ...array2];
+    console.log(combinedArray); // [1, 2, 3, 4]
+
+<b>References:</b>
+
+MDN Web Docs. (2019). Array. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array.
+
+Ayodeji, B. (2019). How to Manipulate Arrays in JavaScript. [online] freeCodeCamp.org. Available at: https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/.
+
 
 # Q11	
 Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
