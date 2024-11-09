@@ -528,18 +528,21 @@ Another important aspect about data type coercion is that JavaScript only has th
 
 It's important to mention that the strict equality operator does not trigger an implicit coercion. When using the <b>strict operator (===)</b>, the expression will check both data type and value in order to evaluate the operation, while the <b>loose operator (==)</b> only checks the value itself. 
 
-#### Example of explicit type coercion in primitive types:
 
-    - String coercion:
+### Example of explicit type coercion in primitive types:
+String coercion:
     
     String(123) // explicit
     123 + ''    // implicit way is triggered by the binary + operator
 
-    - Symbol coercion: It can only be converted by explicitly declaration
+Symbol coercion: It can only be converted by explicitly declaration
     
     String(Symbol('my symbol'))   // 'Symbol(my symbol)'
 
-    - Boolean conversion: It can be performed applying the Boolean () function. Double negation !! is a quicker way to convert data type into Boolean value.
+    console.log(Symbol("id") + ""); // TypeError: Cannot convert a Symbol value to a string
+
+
+Boolean conversion: It can be performed applying the Boolean () function. Double negation !! is a quicker way to convert data type into Boolean value.
 
     let num = 0;
     let isZero = Boolean(num);  // false, because 0 is a "falsy" value
@@ -547,13 +550,22 @@ It's important to mention that the strict equality operator does not trigger an 
     let value = "JavaScript";
     let isTruthy = !!value;  // true, because JS is a non empty string
 
-    - Numeric conversion: It can be performed by using Number() function.
+    List of falsy values: 
+    - Empty string '' 
+    - 0     
+    - -0
+    - NaN - Not a number
+    - Null
+    - Undefined
+    - False
+
+Numeric conversion: It can be performed by using Number() function.
+    
     Number('123')   // 123
 
 
-#### Example of implicit type coercion in primitive types:
-    
-    - String and Number: JS typically converts number into string.
+### Example of implicit type coercion in primitive types:
+String and Number: JS typically converts number into string.
 
     let result = "5" + 1;  // "51" (number 1 is coerced to a string)
     let sum = "5" - 1;     // 4 (string "5" is coerced to a number)
@@ -562,22 +574,23 @@ It's important to mention that the strict equality operator does not trigger an 
     let b = "20";
     let result = a + b;  // "1020" (a number is coerced to a string for concatenation)
 
-    - Boolean: When a non-boolean value is used in a comparison or logical context, JS coerces the non-boolean value to boolean. This type of coercion is often triggered by logical operators (OR, AND, NOT || && !).
+Boolean: When a non-boolean value is used in a comparison or logical context, JS coerces the non-boolean value to boolean. This type of coercion is often triggered by logical operators (OR, AND, NOT || && !).
 
     if ("hello") {  // "hello" is a non-empty string, so it is coerced to true
       console.log("This runs");
     }
 
-#### List of falsy values: 
-- Empty string '' 
-- 0     
-- -0
-- NaN - Not a number
-- Null
-- Undefined
-- False
+Coercion with Template Literals ${} : JS automatically convert values into string.
 
-#### Example of type coercion in Objects calling the valueOf() and toString() methods to convert data type into primitive type:
+    let name = "Jessica";
+    let age = 31;
+    console.log(`Name: ${name}, Age: ${age}`);  // "Name: Jessica, Age: 31"
+
+
+### Example of type coercion in Objects 
+In the example bellow, the expressions are calling the valueOf() and toString() methods to convert data type into primitive type. 
+
+The valueOf () function is used when the value expected is a numeric data type and toString() when the expected value is string data type.
 
     let obj = { valueOf: () => 42 };
     let result = obj + 10;  // Result will be 52, since valueOf() is called
@@ -585,37 +598,37 @@ It's important to mention that the strict equality operator does not trigger an 
     let obj = { toString: () => "Hello" };
     let result = "Message: " + obj;  // Result will be "Message: Hello"
     
-    - Example of a default coercion in obj:
+Example of a default coercion in obj:
 
     let obj = {};
     let result = obj + "";  // "[object Object]" (default string representation)
 
 
-#### Example of implicit type coercion in Special Objects(built-in objects):
-
-    - Arrays: JS will coerce array elements into a string using the toString() method.
+### Example of implicit type coercion in Special Objects(built-in objects):
+Arrays: JS will coerce array elements into a string using the toString() method.
 
     let arr = [1, 2, 3];
     let result = arr + "";  // "1,2,3" (array is coerced to a string)
 
-    - Dates: JS will coerce date object into a string, usually in a date format.
+Dates: JS will coerce date object into a string, usually in a date format.
     
     let date = new Date();
     let result = date + "";  // "Fri Nov 09 2024 12:34:56 GMT-0500 (Eastern Standard Time)"
 
-    - Function Object: JS returns the string representation of the function's source code.
+Function Object: JS returns the string representation of the function's source code.
     
     function greet() {
         return "Hello";
     }
     console.log(greet + "");  // "function greet() { return 'Hello'; }"
 
-    - RegExp coercion: JS first call the toString() method to coerce regular expression into string.
+### Custom coercion 
+RegExp coercion: JS first call the toString() method to coerce regular expression into string.
     
     let regex = /abc/;
     console.log(regex.toString());  // "/abc/"
 
-    - Map and Set objects: JS doesn't convert map and set objects automatically into a string, the method JSON.stringify() needs to be call first in order to perform the coercion.
+Map and Set objects: JS doesn't convert map and set objects automatically into a string, the method JSON.stringify() needs to be call first in order to perform the coercion.
 
     let set = new Set([1, 2, 3]);
     console.log(JSON.stringify([...set]));  // Outputs "[1,2,3]"
@@ -629,7 +642,13 @@ GeeksforGeeks (2020). What is Type Coercion in JavaScript ? [online] GeeksforGee
 
 ‌
 # Q9	
-Explain data types, using examples from the JavaScript programming language
+
+### Data types in JavaScript
+
+
+<b>References:</b>
+
+W3Schools (2020). JavaScript Data Types. [online] W3schools.com. Available at: https://www.w3schools.com/js/js_datatypes.asp.
 
 # Q10	
 Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
