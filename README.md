@@ -33,7 +33,7 @@ Example of source control process from my past project in term 2 in Coder Academ
 ![Example of git pull requests](./git1.png)
 
 
-References:
+<b>References:</b>
 
 Workbook assignment: JessicaVaz_T2A1-A
 
@@ -76,7 +76,7 @@ This indicates how easy the software allows testers to perform testing on the so
 ### Photo example of software quality aspects
 ![Photo example of software quality aspects from the website codoid](./q2%20copy.png)
 
-References:
+<b>References:</b>
 
 Codoid (2019). The Basics of Software Quality Attributes. [online] Codoid. Available at: https://codoid.com/software-testing/the-basics-of-software-quality-attributes/.
 
@@ -120,7 +120,7 @@ Some important features of Node.js:
 ![Example of PUT HTTP request in MERN](https://images.contentstack.io/v3/assets/blt7151619cb9560896/bltdf6ce2d4c4ce0204/66684a2f04c62927f26f013d/mern-stack-example.svg)
 
 
-References:
+:
 
 MongoDB (n.d.). MERN Stack Explained. [online] MongoDB. Available at: https://www.mongodb.com/resources/languages/mern-stack.
 
@@ -155,7 +155,7 @@ A product manager who will overview the website project is also required. This p
 Project managers should have familiarity with project management tools such as Trello, Jira and Agile/ Scrum expertise. Apart from this, having familiarity with the other aspects of the project including development stages, testing stages would be highly beneficial.
 
 
-References:
+<b>References:</b>
 
 Workbook assignment: JessicaVaz_T2A1-A
 
@@ -230,7 +230,7 @@ I have tested the features against different types of inputs, trying to catch er
 - Marshmallow.validate: Built-in validators that can be used to enforce data validation. These validations are placed in the schemas. It can be used on name, email, password, one of (it's used to ensure that a field's value is one of a specified set of acceptable choices).
 
 
-References: 
+<b>References:</b>
 
 Project assignment: JessicaVaz_T2A2
 
@@ -297,7 +297,7 @@ Improvement suggested:
 - Ensure future projects has more validations in place.
 - Implement sanitization for my future projects.
 
-References: 
+<b></b>:
 
 Project assignment: JessicaVaz_T2A2
 
@@ -507,18 +507,127 @@ Example:
     console.log("This will run no matter what.");
     }
 
-References:
+<b>References:</b>
 
 developer.mozilla.org. (n.d.). Control flow - MDN Web Docs Glossary: Definitions of Web-related terms | MDN. [online] Available at: https://developer.mozilla.org/en-US/docs/Glossary/Control_flow.
 
 web.dev. (n.d.). Control flow. [online] Available at: https://web.dev/learn/javascript/control-flow.
 
-‌
-‌
 
 # Q8	
-Explain type coercion, using examples from the JavaScript programming language
+JavaScript is considered a *weakly typed language*, also called dynamically typed, which means it's more flexible when it comes to data type checks. Operations in JS can be performed without a strict data type check, in case of an expression being evaluated with two different types, JS will try to coerce both types into the same type in order to perform the evaluation. 
 
+This process is called <b>Type coercion</b> in JavaScript. This is one of the main difference between JavaScript and Python programming languages. Python on the other hand is considered a *strong typed language*, this means Python won't allow operations to be performed on different data types without an implicit declaration before hand. If we tried to perform that operation in Python, we would end up with an error.
+
+There's two types of coercion in JS, the <b>implicit type</b> which JavaScrypt automatically converts the data type in order to make the expression work, and the <b>explicit type</b> when the user converts the type manually. Type coercion is applicable in all data types (primitive types or objects), when this process happens in objects, JS will try to convert the object into a primitive type using toString() or valueOf() methods. It's important to remember that if none of those methods are called, JS will convert to it's default method: String. 
+
+Another important aspect about data type coercion is that JavaScript only has three different types of coercions: 
+- to string
+- to boolean
+- to number 
+
+It's important to mention that the strict equality operator does not trigger an implicit coercion. When using the <b>strict operator (===)</b>, the expression will check both data type and value in order to evaluate the operation, while the <b>loose operator (==)</b> only checks the value itself. 
+
+#### Example of explicit type coercion in primitive types:
+
+    - String coercion:
+    
+    String(123) // explicit
+    123 + ''    // implicit way is triggered by the binary + operator
+
+    - Symbol coercion: It can only be converted by explicitly declaration
+    
+    String(Symbol('my symbol'))   // 'Symbol(my symbol)'
+
+    - Boolean conversion: It can be performed applying the Boolean () function. Double negation !! is a quicker way to convert data type into Boolean value.
+
+    let num = 0;
+    let isZero = Boolean(num);  // false, because 0 is a "falsy" value
+
+    let value = "JavaScript";
+    let isTruthy = !!value;  // true, because JS is a non empty string
+
+    - Numeric conversion: It can be performed by using Number() function.
+    Number('123')   // 123
+
+
+#### Example of implicit type coercion in primitive types:
+    
+    - String and Number: JS typically converts number into string.
+
+    let result = "5" + 1;  // "51" (number 1 is coerced to a string)
+    let sum = "5" - 1;     // 4 (string "5" is coerced to a number)
+
+    let a = 10;
+    let b = "20";
+    let result = a + b;  // "1020" (a number is coerced to a string for concatenation)
+
+    - Boolean: When a non-boolean value is used in a comparison or logical context, JS coerces the non-boolean value to boolean. This type of coercion is often triggered by logical operators (OR, AND, NOT || && !).
+
+    if ("hello") {  // "hello" is a non-empty string, so it is coerced to true
+      console.log("This runs");
+    }
+
+#### List of falsy values: 
+- Empty string '' 
+- 0     
+- -0
+- NaN - Not a number
+- Null
+- Undefined
+- False
+
+#### Example of type coercion in Objects calling the valueOf() and toString() methods to convert data type into primitive type:
+
+    let obj = { valueOf: () => 42 };
+    let result = obj + 10;  // Result will be 52, since valueOf() is called
+
+    let obj = { toString: () => "Hello" };
+    let result = "Message: " + obj;  // Result will be "Message: Hello"
+    
+    - Example of a default coercion in obj:
+
+    let obj = {};
+    let result = obj + "";  // "[object Object]" (default string representation)
+
+
+#### Example of implicit type coercion in Special Objects(built-in objects):
+
+    - Arrays: JS will coerce array elements into a string using the toString() method.
+
+    let arr = [1, 2, 3];
+    let result = arr + "";  // "1,2,3" (array is coerced to a string)
+
+    - Dates: JS will coerce date object into a string, usually in a date format.
+    
+    let date = new Date();
+    let result = date + "";  // "Fri Nov 09 2024 12:34:56 GMT-0500 (Eastern Standard Time)"
+
+    - Function Object: JS returns the string representation of the function's source code.
+    
+    function greet() {
+        return "Hello";
+    }
+    console.log(greet + "");  // "function greet() { return 'Hello'; }"
+
+    - RegExp coercion: JS first call the toString() method to coerce regular expression into string.
+    
+    let regex = /abc/;
+    console.log(regex.toString());  // "/abc/"
+
+    - Map and Set objects: JS doesn't convert map and set objects automatically into a string, the method JSON.stringify() needs to be call first in order to perform the coercion.
+
+    let set = new Set([1, 2, 3]);
+    console.log(JSON.stringify([...set]));  // Outputs "[1,2,3]"
+
+
+<b>References:</b>
+
+Samoshkin, A. (2018). JavaScript type coercion explained. [online] freeCodeCamp.org. Available at: https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/.
+
+GeeksforGeeks (2020). What is Type Coercion in JavaScript ? [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/what-is-type-coercion-in-javascript/.
+
+‌
 # Q9	
 Explain data types, using examples from the JavaScript programming language
 
