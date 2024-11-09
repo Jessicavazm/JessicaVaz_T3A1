@@ -1044,22 +1044,39 @@ Ayodeji, B. (2019). How to Manipulate Arrays in JavaScript. [online] freeCodeCam
 
 
 # Q11	
+In JavaScript, an object is a collection of <b>key-value pairs</b> that represent the properties of the object. Methods are functions that belong to an object and are used to manipulate its data. In other words, a method is a property of an object that has a function as its value. Object methods are often used to create, retrieve, update, and delete data within objects.
+
+Below, I will describe JavaScript built-in methods along with coding examples for further explanation.
 
 #### How to create an object 
-Using object literal and object constructor:
+JS objects can be created using obj literals or object constructor. Using the object constructor allows many instances to be created through the object "blueprint".
 
+    // Creating a new obj using obj literals:
 
     let person = {
         name: "Jessica",
         age: 31
-    }; // Object literal
+    }; 
 
-    let car = new Object();
-    car.make = "Toyota";
-    car.model = "Camry"; // Object constructor
+
+    // Creating a new obj using obj constructor:
+
+    function Car(make, model) {
+    this.make = make;
+    this.model = model;
+
+    this.getDetails = function() {
+        return `${this.make} ${this.model}`;
+    };
+    }
+
+    // Creating new instances of the Car object:
+
+    const car1 = new Car("Toyota", "Camry");
+    const car2 = new Car("Honda", "Civic");
 
 #### How to access the properties
-To access the object's properties both square notation or dot notation can be used.
+To access the object's properties both square notation or dot notation can be used. Dot notation is mostly used as it is more clear to read.
 
     console.log(person.name); // "Jessica" (dot notation)
     console.log(person["age"]); // 29 (bracket notation)
@@ -1096,16 +1113,82 @@ For...in loop can interact over the object's properties.
 #### hasOwnProperty() method
 This method check if an object has a specified property.
 
-console.log("name" in person); // true
-console.log(person.hasOwnProperty("age")); // true
+    console.log("name" in person); // true
+    console.log(person.hasOwnProperty("age")); // true
+
+#### Object destructuring() method
+JavaScript supports destructuring, allowing properties to be unpacked into individual variables.
+
+    const { name, age } = person;
+    console.log(name); // "Jessica"
+    console.log(age); // 30
+
+#### Object.assign() and ...Spread operator.
+This method merges two objects into a new one and it can also create shallow copies.
+
+    Merging example:
+
+    let address = { city: "Melbourne", country: "Australia" };
+    let personWithAddress = { ...person, ...address };
+    console.log(personWithAddress);
+    // { name: "Jessica", age: 30, city: "Melbourne", country: "Australia" }
 
 
+    Creating shallow copy example:
+
+    let original = { name: "Jessica" };
+    let copy = { ...original };
+    copy.name = "Iryna";
+    console.log(original.name); // "Jessica" (original is unaffected)
 
 
+#### Setter and Getter in JS Objects
+JS allows setter and getter methods to be used in objects define properties.
+
+    let rectangle = {
+        width: 5,
+        height: 10,
+        get area() {
+            return this.width * this.height;
+        },
+        set dimensions({ width, height }) {
+            this.width = width;
+            this.height = height;
+        }
+    };
+
+    console.log(rectangle.area); // 50
+    rectangle.dimensions = { width: 7, height: 14 };
+    console.log(rectangle.area); // 98
+
+#### Retrieving object's keys, values and entries with methods
+- Object.keys() returns an array of keys.
+- Object.values() returns an array of values.
+- Object.entries() returns an array of key-value pairs.
+
+Examples:
+
+    console.log(Object.keys(person)); // ["name", "age"]
+    console.log(Object.values(person)); // ["Jessica", 30]
+    console.log(Object.entries(person)); // [["name", "Jessica"], ["age", 30]]
+
+#### This keyword 
+.this keyword is used to access and manipulate other properties of the same object. <b>This keyword</b> refers to the object executing the function. It's important to mention that the value of 'this' can change, making 'this' very dynamic.
+
+Example:
+
+    let person = {
+        name: "Jessica",
+        greet() {
+            console.log(`Hello, my name is ${this.name}`);
+        }
+    };
+    person.greet(); // Output: "Hello, my name is Jessica"
 
 
-
-
+#### Extra JS object methods:
+- Object.freeze() makes an object immutable, preventing any changes.
+- Object.seal() allows modifying existing properties but prevents adding or deleting properties.
 
 # Q12	
 Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
