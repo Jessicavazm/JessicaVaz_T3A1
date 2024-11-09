@@ -894,11 +894,13 @@ MDN (2019). JavaScript data types and data structures. [online] MDN Web Docs. Av
 
 ‌
 # Q10	
-Arrays in JavaScript can be accessed through indexes. JavaScript has a rich number of methods available to manipulate arrays. Some of the most common methods will described bellow with JS coding examples to further explain the process.
+JavaScript has a rich number of methods available to manipulate arrays. Some of the most common methods will described bellow with JS coding examples to further explain the process.
 
-How to declare an array, myArr variable in the used in all the examples bellow:
+How to declare an array:
     
     let myArr = ["Jess", 31, "Melbourne"]
+
+Note: myArr variable will be used in the following examples. To not overcrowd the file, I won't keep declaring myArr.
 
 ### Concat() method
 This method add two arrays together and returns a new array
@@ -1042,7 +1044,68 @@ Ayodeji, B. (2019). How to Manipulate Arrays in JavaScript. [online] freeCodeCam
 
 
 # Q11	
-Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
+
+#### How to create an object 
+Using object literal and object constructor:
+
+
+    let person = {
+        name: "Jessica",
+        age: 31
+    }; // Object literal
+
+    let car = new Object();
+    car.make = "Toyota";
+    car.model = "Camry"; // Object constructor
+
+#### How to access the properties
+To access the object's properties both square notation or dot notation can be used.
+
+    console.log(person.name); // "Jessica" (dot notation)
+    console.log(person["age"]); // 29 (bracket notation)
+
+#### How to add properties
+To add new properties dot notation can be used on object.
+
+    person.city = "Melbourne";
+    console.log(person.city); // "Melbourne"
+
+#### How to update object's properties
+To update a property, you need to reassign the value using dot notation.
+
+    person.age = 30;
+    console.log(person.age); // 30
+
+
+#### Deleting properties
+To delete a property, the 'delete' method will be used.
+
+    delete person.city;
+    console.log(person.city); // undefined
+
+#### Manipulate objects with loops (for...in)
+For...in loop can interact over the object's properties.
+
+    for (let key in person) {
+        console.log(`${key}: ${person[key]}`);
+    }
+    // Output:
+    // name: Jessica
+    // age: 30
+
+#### hasOwnProperty() method
+This method check if an object has a specified property.
+
+console.log("name" in person); // true
+console.log(person.hasOwnProperty("age")); // true
+
+
+
+
+
+
+
+
 
 # Q12	
 Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
