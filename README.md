@@ -894,7 +894,7 @@ MDN (2019). JavaScript data types and data structures. [online] MDN Web Docs. Av
 
 ‌
 # Q10	
-JavaScript has a rich number of methods available to manipulate arrays. Some of the most common methods will described bellow with JS coding examples to further explain the process.
+JavaScript has a rich number of methods available to manipulate <b>arrays</b>. Some of the most common methods will described bellow with JS coding examples to further explain the process.
 
 How to declare an array:
     
@@ -1038,18 +1038,45 @@ Example:
 
 <b>References:</b>
 
+
+#### Personalised functions
+Personalised function is another way to manipulate arrays in JS, you can create a function with a specified condition. This type of manipulation can be a bit more specific than the JS built-in methods.
+
+    Example of using a function to manipulate an array:
+
+    const numbers = [10, 45, 3, 7, 29];
+
+    function sortDescending(array) {
+        return array.sort((a, b) => b - a);
+    }
+
+    const sortedNumbers = sortDescending(numbers);
+    console.log(sortedNumbers);
+    // Output: [45, 29, 10, 7, 3]
+
+
 MDN Web Docs. (2019). Array. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array.
 
 Ayodeji, B. (2019). How to Manipulate Arrays in JavaScript. [online] freeCodeCamp.org. Available at: https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/.
 
 
 # Q11	
-In JavaScript, an object is a collection of <b>key-value pairs</b> that represent the properties of the object. Methods are functions that belong to an object and are used to manipulate its data. In other words, a method is a property of an object that has a function as its value. Object methods are often used to create, retrieve, update, and delete data within objects.
+In JavaScript, an object is a collection of <b>key-value pairs</b> that represent the properties of the object. Methods are functions that belong to an object and are used to manipulate its data. In other words, a method is a property of an object that has a function as its value. 
+
+Object methods are often used to create, retrieve, update, and delete data within objects. A property's key can be any string and a property's value can be a string, number, boolean, object, function, null or undefined. Most objects in JS are assigned to a variable which facilitates manipulation, however objects can exist without being named or assigned to a variable. 
+
+Common cases when an object is not directly linked with a variable:
+
+- When an anonymous object is being passed as an argument to a function.
+- Directly define and return objects in the return statement.
+- Objects can be used directly in expressions, conditions, or configurations without being stored in variables.
+- IIFEs: when objects are created inside of a function, the object here is function scoped.
+
 
 Below, I will describe JavaScript built-in methods along with coding examples for further explanation.
 
 #### How to create an object 
-JS objects can be created using obj literals or object constructor. Using the object constructor allows many instances to be created through the object "blueprint".
+JS objects can be created using obj literals or object constructor. Using object constructor allows many instances to be created through the object "blueprint".
 
     // Creating a new obj using obj literals:
 
@@ -1173,7 +1200,7 @@ Examples:
     console.log(Object.entries(person)); // [["name", "Jessica"], ["age", 30]]
 
 #### This keyword 
-.this keyword is used to access and manipulate other properties of the same object. <b>This keyword</b> refers to the object executing the function. It's important to mention that the value of 'this' can change, making 'this' very dynamic.
+<b>.this</b> keyword is used to access and manipulate other properties of the same object. This keyword refers to the object executing the function. It's important to mention that the value of 'this' can change, making 'this' very dynamic.
 
 Example:
 
@@ -1190,5 +1217,102 @@ Example:
 - Object.freeze() makes an object immutable, preventing any changes.
 - Object.seal() allows modifying existing properties but prevents adding or deleting properties.
 
+
+#### Personalised function to manipulate an object
+
+    function updateUserAge(user, newAge) {
+        user.age = newAge;
+        return user;
+    }
+
+    let updatedUser = updateUserAge(user, 32);
+    console.log(updatedUser); // Output: { name: "Jessica", age: 32 }
+
+
 # Q12	
-Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
+<b>JavaScript Object Notation (JSON)</b> is a lightweight text data format, however it's syntax is derived from JS objects, key- value pair, hence the reason why they look similar. One of main benefits of having a similar syntax to JS objects it that the conversion between both JSON and JS objects can be done very easily. JSON is extremely compatible with numerous programming languages.
+
+JSON is commonly used to transfer data between the browser and the server. JavaScript has two built-in methods to manipulate JSON data format: JSON.parse() and JSON.stringify() methods. Since JSON is a data format, there aren't plenty manipulation that can be performed on them, instead you need to convert JSON into JS objects or arrays first and then you can use one of the numerous methods JavaScript offers.
+
+#### JSON format
+- Data is stored in *name/value* pairs.
+- Data is split by commas.
+- JSON keys must be string type placed within double quotes.
+- JSON strings cannot contain functions, undefined, or special JavaScript values like Infinity or NaN.
+- JSON value can be string, number(int or float), boolean, array, object or null.
+- Curly braces hold objects.
+- Square brackets hold arrays.
+
+
+Example of JSON text format:
+
+    {
+        "name": "Jessica",
+        "age": 31,
+        "city": "Melbourne"
+    }   
+
+#### JSON.parse() method
+The JSON.parse() method converts JSON strings into JavaScript objects. This method is commonly used when receiving data from a web server or external source such as API, as data is often sent in JSON format. By parsing the JSON string, you turn it into a JavaScript object, which can then be manipulated using JavaScript’s built-in methods and properties.
+
+Example:
+
+    const jsonString = '{"name": "Jessica", "age": 31, "city": "Melbourne"}';   
+
+    const person = JSON.parse(jsonString);
+
+    console.log(person.name); // Output: "Jessica"
+    console.log(person.age);  // Output: 31
+    console.log(person.city); // Output: "Melbourne"
+
+When using the parse() method on JSON array, the method will return a JS array instead of a JS object.
+
+    const jsonArrayString = '[{"name": "Jessica", "age": 31}, {"name": "Jairo", "age": 29}]';
+
+    // Parsing the JSON string to convert it to a JavaScript array
+    const users = JSON.parse(jsonArrayString);
+
+    console.log(users);
+    // Output: [ { name: 'Jessica', age: 31 }, { name: 'Jairo', age: 29 } ]
+
+#### JSON.stringify() method
+The JSON.stringify() method converts a JavaScript object into a JSON string. This is often used when sending data to a server for storage (local or session storage), as JSON strings are a standard data format for web communication.
+
+Example:
+
+    const person = {
+        name: "Jessica",
+        age: 31,
+        city: "Melbourne"
+    };
+
+    // Converting the JavaScript object into a JSON string
+    const jsonString = JSON.stringify(person);
+
+    console.log(jsonString);
+    // Output: '{"name":"Jessica","age":31,"city":"Melbourne"}'
+
+
+The JSON.stringify() method can also accept additional arguments to format the output, making the JSON string more readable. For example, you can specify the number of spaces for indentation, which is useful for debugging or logging data.
+
+Example of pretty-printing using JSON.stringify() method:
+
+    const prettyJsonString = JSON.stringify(user, null, 2);
+    console.log(prettyJsonString);
+    /* Output:
+    {
+        "name": "Jessica",
+        "age": 31
+    }
+    */
+
+#### JSON.stringify() Replacer Function
+This method can take a replacer function as a second argument, which allows you to select which properties to include or exclude when converting an JS object into JSON string.
+
+Example:
+
+    const user = { name: "Jessica", age: 31, password: "secret123" };
+    const jsonString = JSON.stringify(user, (key, value) => {
+        return key === "password" ? undefined : value; // Exclude the password
+    });
+    console.log(jsonString); // Output: '{"name":"Jessica","age":31}'
