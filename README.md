@@ -2,32 +2,32 @@
 
 
 # Q1 
-During our course, we have been using GIT as it's widely known and it's a very popular choice for managing code and keeping track of code changes. Apart from Git, other common source control programs are Mercurial and Subversion. 
+During our course, we have been using GIT as it's widely known and a very popular choice for managing code and keeping track of code changes. Apart from Git, other common source control programs are Mercurial and Subversion. 
 
 When using source control for a large project, we want to ensure the GIT covers all features, and also includes the documentation as it's very important in all scale programs. The repository is hosted on the platform GitHub which offers plenty of features including branch merge, code comparison and code collaboration.
 
-The first step is to initialise a repository in the main or master branch, which will store the project's source code and it's files. When initialising the repository, we also need to add the README.md file which contains the project's documentation. README.md file contains all of the information about the program including name and description, table of contents, all the steps required to run the application, the usage cases, the tech stacked used to build the program, contribution guidelines, license information and plenty more. The gitignore template is another option we can add when initialising the project, this file will contain all the files git should ignore when pushing content to the repository.
+The first step is to initialise a repository in the main or master branch, which will store the project's source code and it's files. When initialising the repository, we also need to add the README.md file which contains the project's documentation. README.md file contains information about the program including name and description, table of contents, steps required to run the application, usage cases, tech stack used to build the program, contribution guidelines, license information and plenty more. Gitignore template is another option we can add when initialising the project, this file will contain all files git should ignore when pushing content to the repository.
 
-Through the building process, different branches are created to allow developers to work on different features independently without code conflicts. It's recommended to create a different branch for each feature as this allows independently testing and experimenting without compromising the rest of the code. When creating news branches for specific features, the conventional name used is <b>feature</b>, this ensure a clear description of what's the purpose of the extra branch. Name example bellow:
+Through the building process, different branches are created to allow developers to work on different features independently without code conflicts. It's recommended to create a different branch for each feature as this allows independently testing and experimenting without compromising the rest of the code. When creating news branches for specific features, the conventional name used is <b>feature</b>, this ensures a clear description of what's the purpose of the extra branch. Name example bellow:
 
     feature/authentication
 
-With every commit, we should include meaningful messages to describe what changes has been added or changes. A good practise to have the type of commit before the message, they provide extra details for the commit messages. Other good practices includes keeping the message short and clear.
+With every commit, we should include meaningful messages to describe what changes have been added or changes. A good practise to have the type of commit before the message, they provide extra details for the commit messages. Other good practices includes keeping the message short and clear.
 
 Examples of conventional commit bellow:
 * git commit -m "docs: added a brief description" 
 * git commit -m "feat: added a JWT to auth" 
-* git commit -m "fix: fixed a bug in user auth fn" 
+* git commit -m "fix: fixed a bug in user auth function" 
 * git commit -m "test: test done in user's auth" 
 
-Once all testing is complete and the code functions as intended, the feature branches can be merged into the main branch, which stores the source code and the production ready code. Features branches can also be deleted safely after being merged, however this is optional step. The first step to merge the branch is to perform a pull request. A pull request contains information describing the branch's purpose, and it's code. 
+Once all testing is complete and the code functions as intended, the feature branches can be merged into the main branch, which stores the source code and the production ready code. Feature branches can also be deleted safely after being merged, however this is optional step. The first step to merge the branch is to perform a pull request. A pull request contains information describing the branch's purpose, and it's code. 
 
 Developers working in the project can review the code, suggest improvements, provide feedbacks and ensure it doesn't have any conflicts with other existing branches. In case of an existing conflict, developers are required to solve the conflict first in order to proceed with the pull request. Another good feature is that Github makes it possible to assign reviewers and assignees to each branch or pull request. This ensures a structured review process and accountability for code quality.
 
-When all required tasks and requirements has been reached, the pull request will be ready to merge. Once the process is done, an acknowledgement message will be provided, and all of the content from the extra branch will be merged into the main branch. Once all branches has been merged, and the code is working as intended, the code will be ready for deployment.
+When all required tasks and requirements has been reached, the pull request will be ready to merge. Once the process is done, an acknowledgement message will be provided, and all the content from the extra branch will be merged into the main branch. Once all branches has been merged, and the code is working as intended, the code will be ready for deployment.
 
 
-#### Git commits and pull requests example
+#### Git commits and pull requests 
 Example of source control process from my past project in term 2 in Coder Academy.
 
 ![Example of git pull requests](./git1.png)
@@ -41,14 +41,14 @@ freeCodeCamp.org. (2022). How to Write Better Git Commit Messages – A Step-By-
 
 
 # Q2
-Quality aspects ensure the quality of a software, how functional and well-structured the application is. Every software should aim to incorporate the quality aspects in order to deliver a better user experience. Softwares can be measured based on a group of aspects or on a singular aspect. 
+Quality aspects ensure the quality of a software, how functional and well-structured the application is. Every software should aim to incorporate the quality aspects in order to deliver a better user experience. Software can be measured based on a group of aspects or on a singular aspect. 
 
 Some of the most important aspects are listed bellow with a brief description on each of them:
 
 #### Usability
-User usability is a very important aspect, as it determines the overall software success. Softwares should be easy to navigate, preferably it should not require much training and it should require the minimum amount of clicks to perform a task. 
+User usability is a very important aspect, as it determines the overall software success. A software should be easy to navigate, preferably it should not require much training, and it should require the minimum amount of clicks to perform a task. 
 
-Another very important aspect is that softwares should consider and accommodate users with different disabilities. Ways to ensure this aspect is successful is collecting user stories, having an user product owner in place and ensuring designs are visually appealing and engaging without overwhelming the users.
+Another very important aspect is that a software should consider and accommodate users with different disabilities. Ways to ensure this aspect is successful is collecting user stories, having a user product owner in place and ensuring designs are visually appealing and engaging without overwhelming the users.
 
 #### Functionality
 Software functionality is another very important aspect as the software should be able to perform the intended functions and offer the users all the functions needed to perform a specific task. Software developers are responsible for the software functionalities.
@@ -63,15 +63,15 @@ Software should be able to handle errors gracefully without crashing or losing d
 Developers should prioritise code maintainability to adapt to evolving user needs, as software must keep pace. The codebase should be structured for easy updates, allowing developers to implement changes, fix bugs, and add new features. 
 
 #### Integrity
-Integrity aspect shows how easy the software can integrate with the dependant softwares in order to increase functionality.
+Aspects that show how easy the software can integrate with the dependent software in order to increase functionality.
 
 #### Security
-Security is also on the top of the list, users must have their data protected when using the software. Software security ensures software is protected against cyber crimes, and have methods in place to protect users in case of cyber attacks. 
+This aspect is also on the top of the list, users must have their data protected when using the software. Software security ensures software is protected against cyber crimes, and have methods in place to protect users in case of cyber-attacks. 
 
-Measurements such as authentication and authentication can greatly reduce the risk of cyber crimes. Another important practise is to regularly implement security checks to ensure software is often protected. Regular checks also can prevent a future security breach.
+Measurements such as authentication and authentication can greatly reduce the risk of cyber crimes. Another important practice is to regularly implement security checks to ensure software is often protected. Regular checks also can prevent a future security breach.
 
 #### Testability
-This indicates how easy the software allows testers to perform testing on the software, how long does it takes to write a testing for the specific software, and how much time it needs to run the testing. One way to reduce costs here is for developers to perform unit and integration testing during the development stage before testers comes into place.  
+This aspect indicates how easy the software allows testers to perform testing on the software, how long it takes to write a testing for the specific software, and how much time it needs to run the testing. One way to reduce costs here is for developers to perform unit and integration testing during the development stage before testers comes into place.  
 
 ### Photo example of software quality aspects
 ![Photo example of software quality aspects from the website codoid](./q2%20copy.png)
@@ -88,60 +88,56 @@ Butinar, M. (2023). Don’t Save on Quality: Essential Attributes of Good Softwa
 # Q3 
 <b>MERN</b> is a pre-built stack web development application based on JavaScript which includes MongoDB, Express.js, React.js, and Node.js technologies. Apart from this variation, there are plenty more of other variations of the *MEAN Stack*. 
 
-The MERN structure follows the MVC (Model-View-Controller) pattern, separating the backend from the frontend, which ensures a clear division of responsibilities and enables independent development. This separation allows developers to work on different parts of the project without interference, enhancing scalability. Testing can also be done separately, allowing bugs to be identified and resolved more efficiently. It's important to mention that all technologies in MERN stores data in the same format.
+The MERN structure follows the MVC (Model-View-Controller) pattern, separating the backend from the frontend, which ensures a clear division of responsibilities and enables independent development. This separation allows developers to work on different parts of the project without interference, enhancing scalability. Testing can also be done separately, allowing bugs to be identified and resolved more efficiently. It's important to mention that all technologies in MERN stack stores data in the same format.
 
 Frontend developers will be more focused on user's interface, while Backend developers will handle the server logic side, data processing and storage. The skill set needed for the backend includes MongoDB, Express.js, and Node.js, while frontend developers will work with React.js, along with additional technologies like HTML, CSS, and programming languages such as Python and JavaScript. 
 
-MERN is divided into a three-tier architecture (Frontend, Backend, and Database) and it enables the creation of a full-stack application using JavaScript and JSON.
+The MERN stack is divided into a three-tier architecture (Frontend, Backend, and Database) and it enables the creation of a full-stack application using JavaScript and JSON.
 
 ### Components
 <b>M - MongoDB (document database)</b>: Mongo is a database which is very compatible with Express.js and Node.js. The database is responsible for storing any data such as user's profiles, product related data, and performing CRUD operations. MongoDB Node.js driver is used to connect DB to Node.js. Another important feature is that, Mongo DB stores data in JSON format.
 
 The process first starts when React.js captures the data from the client server and sends it over to Express.js, where it will be processed and later on, it will be stored in Mongo database. I have attached a photo of the process bellow for more detailed explanation.
 
-<b>E - Express.js (Node.js web framework)</b>: Express is a JavaScrypt frameworks that runs inside Node.js server. It's responsible for handing HTTP requests such as GET, POST, PUT or DELETE and response body.
+<b>E - Express.js (Node.js web framework)</b>: Express is a JavaScript frameworks that runs inside Node.js server. It's responsible for handing HTTP requests such as GET, POST, PUT or DELETE and response body.
 
 <b>R - React.js (a client-side JavaScript framework)</b>: React is the top tier, it's the JavaScript framework which allows the creation of dynamic and interactive interfaces in the client-side. React is responsible for creating and linking interactive elements to the server side and rendering these elements using HTML. 
 
 <b>N - Node.js (the premier JavaScript web server)</b>: Node is a JavaScript open source environment. Node runs on the V8 JS engine and it allows developers to write code on the server side. V8 compiles JS code and turn it into machine code. 
 Some important features of Node.js:
 
-- Capable of handling enquires made by other programming languages including Python, PHP and Ruby.
+- Capable of handling inquires made by other programming languages including Python, PHP and Ruby.
 - Node is built on a single threaded architecture, it uses event loop and event queue to manage all incoming requests. This method is also known as Non-blocking I/O model.
-- It uses asynchronous coding, which can be implemented by callback functions, promises and async/await syntax.
-- Modular structure, different functionalities are organised into different modules.
+- It uses asynchronous coding, which can be implemented by callback functions, promises and async/ await syntax.
+- Modular structure, different functionalities are organized into different modules.
 - Uses NPM- Node Package Manager which allows developers to make use of open source packages speeding the development process.
 
-#### Photo of MERN three-tiers structure from mongodb website
+#### Photo of MERN three-tiers structure from Mongodb website
 ![Example of the MERN structure from mongodb website](https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt4b651817f6dec60f/666848e371203e8537986b38/mern-stack.png)
 
 
 #### Photo example of how 'PUT' http request looks like in MERN stack
 ![Example of PUT HTTP request in MERN](https://images.contentstack.io/v3/assets/blt7151619cb9560896/bltdf6ce2d4c4ce0204/66684a2f04c62927f26f013d/mern-stack-example.svg)
 
-
-:
-
 MongoDB (n.d.). MERN Stack Explained. [online] MongoDB. Available at: https://www.mongodb.com/resources/languages/mern-stack.
 
 W3Schools (2019). Node.js Introduction. [online] W3schools.com. Available at: https://www.w3schools.com/nodejs/nodejs_intro.asp.
-
 
 Amankwah, K. (2023). MERN Stack Project Structure: Best Practices. [online] DEV Community. Available at: https://dev.to/kingsley/mern-stack-project-structure-best-practices-2adk.
 
 ‌
 # Q4	
 #### Front end and Back end
-Web developers are divided in two groups: Front and back end. Frontend developers will be working with everything that is displayed on the browser itself and the Backend developer will work with logic and technical side of the website(this includes APIS and DB). Together, they write the codes that *creates* the website allowing it to be displayed on a browser. Some of the most important skills and knowledge they need in order to create a website includes:
+Web developers are divided in two groups: Front and back end. Frontend developers will be working with everything that is displayed on the browser itself and the Backend developer will work with logic and technical side of the website(this includes APIs and DB). Together, they write the codes that creates the website allowing it to be displayed on a browser. Some of the most important skills and knowledge they need in order to create a website includes:
 
 - HTML: to define the website structure.
 - CSS: to style the website.
-- Javascript: to create the interactive content for the website.
-- Server-side languages: Python, Nodejs to manage data, and create integration.
+- JavaScript: to create the interactive content for the website.
+- Server-side languages: Python, Node.js to manage data, and create integration.
 - Version control system: GIT, to track code changes and allow collaborations between developers.
-- Flask: Python's micro web frame used to create API.
+- Flask: Python's micro web frame used to create the API.
 - PostgreSQL: to manage, store and retrieve data.
-- SQLAlchemy: ORM to connect DB to API.
+- SQLAlchemy: ORM to connect DB to the API.
 
 ### Design 
 UX/ UI designers to ensure positive user's experience while navigating the website. User Interface (UI) designers ensure the elements that users interact directly on the website such as menus and buttons are easy to navigate, clear and visually appealing. User Experience (UX) designers ensure the overall flow on the website is enjoyable and functional. Web designer is also required to create the designs on the website and represent the 'brand' online. 
@@ -167,39 +163,38 @@ Rightpeoplegroup.com. (2024). How to build the ideal website development team st
 ### Marathon running term 2 project
 Brief description of my project:
 
-The Marathon Running API is designed to bring runners together. It has functionality for runners to log their workouts and keep track of workout sessions. In the workout log feature, users are allowed to choose from one of the available run types. Date and distance in kilometers are also required to ensure the log keeps all the crucial information for users to track their best sessions. However, the main functionality of my API is to allow users to be part of running groups.
-Runnings groups will be later added to marathon events created by groups administrators.
+The Marathon Running API is designed to bring runners together. It has functionality for runners to log their workouts and keep track of workout sessions. In the workout log feature, users are allowed to choose from one of the available run types. Date and distance in kilometers are also required to ensure the log keeps all the crucial information for users to track their best sessions. However, the main functionality of my API is to allow users to be part of running groups. These groups will be later added to marathon events created by the groups administrators.
 
 ### Tracking project phrase
-For tracking the project I have created for the term 2, I have used GitHub and Trello for app tracking. When using the GitHub, understanding how git branches works, how to create pull requests and merge branches were essential step to keep my code modular as I was able separate my code and work on different branches simultaneously without interfering with other part of the program.
+For tracking the project I have created for the term 2, I have used GitHub and Trello for app tracking. When using the GitHub, understanding how git branches works, how to create pull requests and merge branches were essential step to keep my code modular as I was able to separate my code and work on different branches simultaneously without interfering with other part of the program.
 
-Trello management tool was also important, as it gave me acknowledgment of what tasks had be prioritized, what tasks had been finished, what features were ready for testing and what branches were ready for merging. Being able to create tasks, add labels, times and reminders on Trello helped to keep track of my progress through the whole process.
+The Trello management tool was also important, as it gave me sense of what tasks had be prioritised, what tasks had been finished, what features were ready for testing and what branches were ready for merging. Being able to create tasks, add labels, times and reminders on Trello helped to keep track of my progress through the whole process.
 
 ### Development phrase
 My initial task was to create an ER diagram, and to help with this task I have used draw.io which is a diagram and flowchart software. For this task, I had to understand how ER diagrams work, how entities are connected, the type of relationship between entities can have between them. In draw.io, I had to understand what formats to use, and what type of arrows to use to demonstrate the right type of relationship connecting the entities. 
 
-When starting the API project, it was crucial to understand how I could create a Virtual Environment to isolate my project, and download required packages to build the project. A understanding of Python PIP package would be necessary, as it was needed when installing dependencies.
+When starting the API project, it was crucial to understand how I could create a Virtual Environment to isolate my project, and download required packages to build the project. An understanding of Python PIP package would be necessary, as it was needed when installing dependencies.
 
 My project was built using Python programming language and Flask (Python's micro framework), along with PostgreSQL database. The database was used to store, manage and retrieve the users, running groups and marathons information. SQLAlchemy dependency was used to allow integration with the database and convert Python objects into database tables (users, groups, marathons, workouts tables). It also allows SQL queries to be performed using Python language. 
 
-When dealing with the database, I needed knowledge about data integrity, constraints, primary keys and foreign keys, schemas and data definition language (DDL). Marshmallow dependency was also used to help reading data to and from the database. The format used was JSON, which works in name- value pairs like dictionary. Flask extensions were used in the project when dealing with authentication and authorization. 
+When dealing with the database, I needed knowledge about data integrity, constraints, primary keys and foreign keys, schemas and data definition language (DDL). Marshmallow dependency was also used to help to read data to and from the database. The format used was JSON, which works in name- value pairs like dictionary. Flask extensions were used in the project when dealing with authentication and authorization. 
 
 Another important field, I required knowledge about was the API endpoints, the different types of requests: GET, POST, DELETE, PUT AND PATCH and the required/ responses bodies. For testing purposes, I have used the Insomnia software which I had to put all the API knowledge into work. 
 
-I have tested the features against different types of inputs, trying to catch errors gracefully and sending back an informative message with the help of SqlAlchemy. I have implemented built-in validation on main inputs including name, email and password using Marshmallow.validate extension. Authorization and authentication features were also tested in Insomnia using JWT. 
+I have tested the features against different types of inputs, trying to catch errors gracefully and sending back an informative message with the help of SqlAlchemy. I have implemented built-in validation on main inputs including name, email and password using Marshmallow. validate extension. Authorization and authentication features were also tested in Insomnia using JWT. 
 
 
 ### Full Tech stack for the project:
 
-- Virtual environment: it's used to isolate the project to not interfere with other projects. This is the first step when we start on the API project .After activating the Venv, we can start getting all the necessary dependencies to build the API project.
+- Virtual environment: it's used to isolate the project to not interfere with other projects. This is the first step when we start on the API project. After activating the VENV, we can start getting all the necessary dependencies to build the API project.
 
 - Python: Programming language used to build the application and manage the dependencies. This is considered the 'base' of the project.
 
-- Python-dot-env: This package is used to help setting up the environment variables that are used to keep sensitive data such as username, password secure. In our project, the environment variables holds the information from database URL and JWT secret key. This file is excluded from the git, but in order for our project to work we need a way to tell other developers or testers they have to set up the environment variables on their end.
+- Python-dot-env: This package is used to help set up the environment variables that are used to keep sensitive data such as username, password secure. In our project, the environment variables hold the information from database URL and JWT secret key. This file is excluded from the git, but in order for our project to work we need a way to tell other developers or testers they have to set up the environment variables on their end.
 
-- Flask: it's a lightweight yet powerful Python based framework that depends on Werkzeug (WSGI library), Jinja (for rendering the pages on server) and Click (for Flask commands lines and custom commands). All dependencies are installed automatically when you instal Flask.
+- Flask: it's a lightweight yet powerful Python based framework that depends on Werkzeug (WSGI library), Jinja (for rendering the pages on server) and Click (for Flask commands lines and custom commands). All dependencies are installed automatically when you install Flask.
 
-- PostgreSQL: It's an open-source relational database management system. It's consist of tables (it stores the data into rows and columns), schemas (it organise and manages DB objects). Additionally, it's a very versatile system that supports a wide range of data types and integrates with different programming languages.
+- PostgreSQL: It's an open-source relational database management system. It's consist of tables (it stores the data into rows and columns), schemas (it organises and manages DB objects). Additionally, it's a very versatile system that supports a wide range of data types and integrates with different programming languages.
 
 - Psycopg2: It works as the driver that connects the API to the DB. It allows your Python applications to connect to and interact with a PostgreSQL database.
 
@@ -221,7 +216,7 @@ I have tested the features against different types of inputs, trying to catch er
 
 - JWTManager: It helps in the process of token decoding and verification.
 
-- Functools: It's used when creating decorators, it allows a function to take another function as a parameter by using the wraps method.
+- Functools: It's used when creating decorators, it allows a function to take another function as a parameter by using the 'wraps' method.
 
 - OS: It's part of Python standard library, it's used to fetch environment variables from .env file and import into main.py file. It connects with the operating system.
 
@@ -264,7 +259,7 @@ Furthermore, I believe that my knowledge in ER Diagram and relationship types im
 
 When it came the time to start the project, my skills and knowledge gained through ZOOM classes and ED content came in handy, I don't think I have struggled when creating VENV and getting all the necessary dependencies. Connecting my API to DB was also a smooth sail. 
 
-To create my API, I have used Python programming language, and my skills and knowledge were ok but I wish I had more knowledge to not struggle a lot, and also to be able to scale my project further. 
+To create my API, I have used Python programming language, and my skills and knowledge were ok, but I wish I had more knowledge to not struggle a lot, and also to be able to scale my project further. 
 
 With the database integration, I wish my skills and knowledge were more profound as I was stuck in this phrase more time than what I should. I run across numerous errors when dealing with the database. I believe having a deeper understanding of ORM, schemas, Primary and Foreign keys, back populating would be extremely beneficial for my next project.
 
@@ -292,7 +287,7 @@ Examples:
 - Being able to understand what to expect when using each HTTP request method (GET, POST, PUT, DELETE, PATCH) allowed me to design the API more effectively. It helped me structure each endpoint properly, ensuring that the correct data was sent and received with each type of request, and made error handling more straightforward. 
 
 Improvement suggested:
-- Explore other testing softwares such as Postman.
+- Explore other testing software such as Postman.
 - Explore different errors types and how to handle them gracefully.
 - Ensure future projects has more validations in place.
 - Implement sanitization for my future projects.
@@ -303,7 +298,7 @@ Project assignment: JessicaVaz_T2A2
 
 
 # Q7	
-<b>Control Flow</b> plays a crucial part in a program because it dictates the order in which the program executes the code. In another words, it dictates the program's flow. The default way the computer reads the code is top to bottom, line by line, until it comes across statements which can redirect the flow. All the examples given in the question will be in JavaScript. 
+<b>Control Flow</b> plays a crucial part in a program because it dictates the order in which the program executes the code. In in other words, it dictates the program's flow. The default way the computer reads the code is top to bottom, line by line, until it comes across statements which can redirect the flow. All the examples given in the question will be in JavaScript. 
 
 Some of the most common statements that can change the flow includes: 
 
@@ -367,7 +362,7 @@ switch ( 2 + 2 === 5 ) {
 The program's flow can be interrupted when it reaches a loop. Loops execute a block of codes on repeat until a condition is met. JavaScript has few different types of loops.
 
 ### While loop
-A while loop is used to run interactions until a specific condition is met or until the loop has reached the end of the iterable data structure. A while loop runs repeatedly, evaluating the condition at the start of every iteration. If the condition is truthy, the body statements are executed, then the condition is evaluated again, and if the condition evaluates to Falsy, the loop never runs. A common use case for a while loop is when the loop length is indeterminate, however it can be used with a specified number of times as the example bellow demonstrate.
+A while loop is used to run interactions until a specific condition is met or until the loop has reached the end of the iterable data structure. A while loop runs repeatedly, evaluating the condition at the start of every iteration. If the condition is Truthy, the body statements are executed, then the condition is evaluated again, and if the condition evaluates to Falsy, the loop never runs. A common use case for a while loop is when the loop length is indeterminate, however it can be used with a specified number of times as the example bellow demonstrate.
 
 Syntax :
 
@@ -387,7 +382,7 @@ Example:
     > "Loop 3."
 
 ### Do...while loop
-A do..while loop is very similar to the while loop. The difference is that the body precedes the condition and the loop runs at least one iteration - even if the condition is Falsy in the first iteration. In the do...while loop, the evaluation actually happens at the end of iteration, that's the reason why the loop always runs at least once. This loop is useful for testing user input against specific conditions. A common use case for a do...while loop is when the loop length is indeterminate.
+A do...while loop is very similar to the while loop. The difference is that the body precedes the condition and the loop runs at least one iteration - even if the condition is Falsy in the first iteration. In the do...while loop, the evaluation actually happens at the end of iteration, that's the reason why the loop always runs at least once. This loop is useful for testing user input against specific conditions. A common use case for a do...while loop is when the loop length is indeterminate.
 
 Syntax:
 
@@ -398,7 +393,7 @@ Syntax:
 
 ### For loop
 A for loop is typically used to execute statements a specific number of times when the number of iterations is known in advance. For loops are made of 3 expressions: initialise, condition, and update. 
-The first expression initialises the loop, the second expression contains the condition and the third expression contains an expression to be executed once the loop has been completed. A for loop runs while the condition expression is truthy, when it becomes Falsy, the loop ends. 
+The first expression initialises the loop, the second expression contains the condition and the third expression contains an expression to be executed once the loop has been completed. A for loop runs while the condition expression is Truthy, when it becomes Falsy, the loop ends. 
 
 Syntax:
 
@@ -443,7 +438,7 @@ How to fetch properties value using the key:
     }
 
 ### For...of loop
-The for...of loop can be used to work with iterables, for example: array, set and map. In the general case, for...of loop iterates over the elements of an iterable and runs the same statements for every element. The variable used in for...of loop can be a variable declared within the loop, or declared within the same scope.
+The for...of loop can be used to work with iterables, for example: array, set and map. In the general case, for...of loop iterates over the elements of an iterable collection and runs the same statements for every element. The variable used in for...of loop can be a variable declared within the loop, or declared within the same scope.
 
 Syntax:
 
@@ -590,7 +585,7 @@ Coercion with Template Literals ${} : JS automatically convert values into strin
 ### Example of type coercion in Objects 
 In the example bellow, the expressions are calling the valueOf() and toString() methods to convert data type into primitive type. 
 
-The valueOf () function is used when the value expected is a numeric data type and toString() when the expected value is string data type.
+The valueOf() function is used when the value expected is a numeric data type and toString() when the expected value is string data type.
 
     let obj = { valueOf: () => 42 };
     let result = obj + 10;  // Result will be 52, since valueOf() is called
@@ -693,7 +688,7 @@ Using toUpperCase() && toLowerCase():
 Represents numbers both integers and float
 - JavaScript numbers are stored as 64-bit floating-point values.
 - JS can store numbers from -2^53 to 2^53 in this data type, numbers larger than 2^53 are stored in BigInt instead.
-- NaN Not a Number: this is also part of the number data type, it's used for arithmetics operations when it encounters a result that can not be processed as a number.
+- NaN Not a Number: this is also part of the number data type, it's used for arithmetic operations when it encounters a result that can not be processed as a number.
 - Infinity and -Infinity: Represents values beyond the minimum and the maximum limits. (Dividing a positive number by 0 in JS, would return 'infinity').
 - Common methods to work with numbers in JS includes: 
     - Number.isInteger() => checks if the numbers is integer
@@ -776,7 +771,7 @@ Represents 'nothing', absence of an object.
 Represents a unique, immutable identifier, useful for object keys
 - Introduced in ES6 (ECMAScript 2015).
 - Often used as an identifier for object's properties.
-- Creates uniques keys using symbol() function.
+- Creates unique keys using symbol() function.
 - Able to hide obj properties in searching calls.
 
 Example of declaring a Symbol with the same name:
@@ -825,7 +820,7 @@ How to change values:
 An array is a special kind of object, it's a collection of indexed values. In JS, an array is represented by an ordered sequence of elements separated by commas and wrapped in square brackets. Array is a way to collect multiple pieces of data together in one variable.
 
 Important features of arrays:
-- Arrays are dynamic in JS, that means it can smaller in size or bigger.
+- Arrays are dynamic in JS, that means it can smaller or bigger.
 - First element in the array is 0, second element is 1, and so on.
 - Arrays can hold different data types.
 - Vast list of methods to manipulate arrays in JS.
@@ -894,7 +889,7 @@ MDN (2019). JavaScript data types and data structures. [online] MDN Web Docs. Av
 
 ‌
 # Q10	
-JavaScript has a rich number of methods available to manipulate <b>arrays</b>. Some of the most common methods will described bellow with JS coding examples to further explain the process.
+JavaScript has a rich number of methods available to manipulate <b>arrays</b>. Some of the most common methods are described bellow with JS coding examples to further explain the process.
 
 How to declare an array:
     
@@ -933,7 +928,7 @@ This method add items to the beginning of the Array, it does change the original
     console.log(myArr) // ["Girl", "Jess", 31, "Melbourne"]
 
 ### Splice() method
-This method removes an element from a specified index. The first parameter is the element index position and the second parameter is the delete count(how many elements to be deleted). This methods changes the original array. When second parameter has not been declared, this method will delete every element starting from the given index.
+This method removes an element from a specified index. The first parameter is the element index position and the second parameter is the delete count(how many elements to be deleted). These methods change the original array. When second parameter has not been declared, this method will delete every element starting from the given index.
 
 It's possible to add elements with the splice method by passing the number 0 in the second parameter.
 The syntax will consist of 3 parameters instead. The first is the element index from where the adding will start, the second parameter is 0, the third parameter are the elements to be added to array.
@@ -1040,7 +1035,7 @@ Example:
 
 
 #### Personalised functions
-Personalised function is another way to manipulate arrays in JS, you can create a function with a specified condition. This type of manipulation can be a bit more specific than the JS built-in methods.
+These functions are another way to manipulate arrays in JS, you can create a function with a specified condition. This type of manipulation can be a bit more specific than the JS built-in methods.
 
     Example of using a function to manipulate an array:
 
@@ -1070,7 +1065,7 @@ Common cases when an object is not directly linked with a variable:
 - When an anonymous object is being passed as an argument to a function.
 - Directly define and return objects in the return statement.
 - Objects can be used directly in expressions, conditions, or configurations without being stored in variables.
-- IIFEs: when objects are created inside of a function, the object here is function scoped.
+- IIFEs: when objects are created inside function, the object here is function scoped.
 
 
 Below, I will describe JavaScript built-in methods along with coding examples for further explanation.
@@ -1151,7 +1146,7 @@ JavaScript supports destructuring, allowing properties to be unpacked into indiv
     console.log(age); // 30
 
 #### Object.assign() and ...Spread operator.
-This method merges two objects into a new one and it can also create shallow copies.
+This method merges two objects into a new one, and it can also create shallow copies.
 
     Merging example:
 
@@ -1307,7 +1302,7 @@ Example of pretty-printing using JSON.stringify() method:
     */
 
 #### JSON.stringify() Replacer Function
-This method can take a replacer function as a second argument, which allows you to select which properties to include or exclude when converting an JS object into JSON string.
+This method can take a "replacer function" as a second argument, which allows you to select which properties to include or exclude when converting an JS object into JSON string.
 
 Example:
 
@@ -1316,3 +1311,10 @@ Example:
         return key === "password" ? undefined : value; // Exclude the password
     });
     console.log(jsonString); // Output: '{"name":"Jessica","age":31}'
+
+
+References:
+
+W3Schools (2019). JSON Introduction. [online] W3schools.com. Available at: https://www.w3schools.com/js/js_json_intro.asp.
+
+‌
